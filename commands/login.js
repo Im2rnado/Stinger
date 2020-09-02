@@ -54,7 +54,7 @@ module.exports = {
 							const balance = await valorant.getWallet();
 
 							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`👋 Welcome, ${data.Display}#${data.Tag}!`)
+								.setTitle(`👋 Welcome, ${data.displayName}#${data.tagLine}!`)
 								.setColor('#FA4454')
 								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 								.setFooter('Wrong info? Make sure to choose the correct region.')
@@ -95,7 +95,7 @@ module.exports = {
 							const balance = await valorant.getWallet();
 
 							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`👋 Welcome, ${data.Display}#${data.Tag}!`)
+								.setTitle(`👋 Welcome, ${data.displayName}#${data.tagLine}!`)
 								.setColor('#FA4454')
 								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 								.setFooter('Wrong info? Make sure to choose the correct region.')
@@ -136,7 +136,7 @@ module.exports = {
 							const balance = await valorant.getWallet();
 
 							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`👋 Welcome, ${data.Display}#${data.Tag}!`)
+								.setTitle(`👋 Welcome, ${data.displayName}#${data.tagLine}!`)
 								.setColor('#FA4454')
 								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 								.setFooter('Wrong info? Make sure to choose the correct region.')
