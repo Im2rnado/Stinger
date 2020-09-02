@@ -1,16 +1,24 @@
 {
-  "name": "discord.js-heroku",
-  "version": "1.0.0",
-  "description": "An in-depth guide on deploying your Discord.js bot on Heroku",
+  "name": "stinger-bot",
+  "version": "2.0.0",
+  "description": "Discord bot that interacts with the Valorant API",
   "main": "index.js",
   "engines": {
-      "node": "14.7",
-      "npm": "6.14.7"
-  },
+    "node": "14.7",
+    "npm": "6.14.7"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Im2rnado",
-  "license": "MIT"
+  "author": "im2rnado",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "ms": "^2.1.2",
+    "valorant.js": "^1.1.7"
+  }
 }
