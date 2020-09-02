@@ -18,7 +18,17 @@
     "valorant.js": "^1.1.7"
   },
   "engines": {
-    "node": "14.9",
-    "npm": "*"
-  }
+    "node": "14.7.0",
+    "npm": "6.14.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Im2rnado/Stinger.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Im2rnado/Stinger/issues"
+  },
+  "homepage": "https://github.com/Im2rnado/Stinger#readme"
 }

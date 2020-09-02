@@ -1,4 +1,4 @@
-const { prefix } = require('../config.json');
+require('dotenv').config();
 const { MessageEmbed } = require('discord.js');
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
 				.setTitle('Here are all of my commands:')
 				.setColor('#0000FF')
 				.setDescription(commands.map(command => command.name).join('\n'))
-				.setFooter(`Send ${prefix}help [command name] to get info on a specific command.`);
+				.setFooter(`Send ${process.env.PREFIX}help [command name] to get info on a specific command.`);
 
 			return message.channel.send(embed);
 		}
@@ -32,7 +32,7 @@ module.exports = {
 
 		if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
 		if (command.description) data.push(`**Description:** ${command.description}`);
-		if (command.usage) data.push(`**Usage:** ${prefix}${command.name} ${command.usage}`);
+		if (command.usage) data.push(`**Usage:** ${process.env.PREFIX}${command.name} ${command.usage}`);
 
 		message.channel.send(data, { split: true });
 	},
