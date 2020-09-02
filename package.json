@@ -1,0 +1,24 @@
+{
+  "name": "stinger-bot",
+  "version": "2.0.0",
+  "description": "Discord bot that interacts with the Valorant API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "im2rnado",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "ms": "^2.1.2",
+    "valorant.js": "^1.1.7"
+  },
+  "engines": {
+    "node": "14.9",
+    "npm": "*"
+  }
+}
