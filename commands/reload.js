@@ -24,5 +24,8 @@ module.exports = {
 				message.channel.send(`There was an error while reloading a command \`${command.name}\`:\n\`${error.message}\``);
 			}
 		}
+		else {
+			message.react('🤡');
+		}
 	},
 };
