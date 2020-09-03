@@ -16,9 +16,10 @@ for (const file of commandFiles) {
 
 const cooldowns = new Discord.Collection();
 
-client.once('ready', () => {
+client.on('ready', () => {
 	console.log('Your Bot in now on!');
 	client.user.setPresence({ activity: { name: '+help', type: 'LISTENING' }, status: 'online' })
+		.then(console.log)
 		.catch(console.error);
 
 });
