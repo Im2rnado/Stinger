@@ -16,7 +16,7 @@ for (const file of commandFiles) {
 
 const cooldowns = new Discord.Collection();
 
-client.on('ready', () => {
+client.once('ready', () => {
 	console.log('Your Bot in now on!');
 	client.user.setPresence({ activity: { name: '+help', type: 'LISTENING' }, status: 'online' })
 		.then(console.log)
@@ -84,4 +84,4 @@ client.on('message', message => {
 	}
 });
 
-client.login;
+client.login(process.env.DISCORD_TOKEN);
