@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'embed',
 	description: 'Says anything you want in an embed!',
+	guildOnly: true,
 	execute(message, args) {
 		const embedContent = args.join (' ');
 		message.delete().catch(err => console.log(err));
