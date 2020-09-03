@@ -9,9 +9,6 @@ module.exports = {
 			member,
 		} = message;
 
-
-		console.log('mute.js is working properly ');
-
 		if(
 			member.hasPermission('ADMINISTRATOR') ||
             member.hasPermission('MANAGE_ROLES')
@@ -28,7 +25,7 @@ module.exports = {
 					message.channel.send(`${target} was Muted!`);
 				}
 				else{
-					message.channel.send('Please add a role named \'Muted\'.');
+					message.channel.send('Please add a role to this server with the name \'Muted\'.');
 				}
 			}
 			else {

@@ -10,8 +10,6 @@ module.exports = {
 			member,
 		} = message;
 
-		console.log('remove.js is working properly ');
-
 		if(member.roles.cache.some(role => role.name === 'Admin')) {
 			const target = message.mentions.members.first();
 			const user = message.mentions.users.first();

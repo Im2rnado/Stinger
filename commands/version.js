@@ -11,7 +11,7 @@ module.exports = {
 			.setTitle('**Stinger Discord Bot**')
 			.setThumbnail('https://cdn.discordapp.com/app-icons/743591965450305636/9288819898ed2298c59eba18d6de2ff8.png')
 			.addFields(
-				{ name: 'Current Bot Version', value: '2.0' },
+				{ name: 'Current Bot Version', value: '2.0.0' },
 				{ name: 'Discord.js Version', value: '12.3.1' },
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
 				{ name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },

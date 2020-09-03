@@ -14,8 +14,6 @@ module.exports = {
 
 		const tag = `<@${member.id}>`;
 
-		console.log('unmute.js is working properly ');
-
 		if(
 			member.hasPermission('ADMINISTRATOR') ||
             member.hasPermission('MANAGE_ROLES')
