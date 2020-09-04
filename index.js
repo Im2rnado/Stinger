@@ -17,11 +17,18 @@ for (const file of commandFiles) {
 const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
-	console.log('Your Bot in now on!');
-	client.user.setPresence({ activity: { name: '+help', type: 'LISTENING' }, status: 'online' })
-		.then(console.log)
-		.catch(console.error);
+	function randomStatus() {
+		const status = ['+help', 'v2.2.0'];
+		const rstatus = Math.floor(Math.random() * status.length);
 
+		// client.user.setActivity(status[rstatus], {type: "WATCHING"});
+		// You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
+		// Example: streaming
+
+		client.user.setActivity(status[rstatus], { type: 'STREAMING', url: 'https://www.twitch.tv/im2rnado' });
+	} setInterval(randomStatus, 20000);
+
+	console.log('Online.');
 });
 
 client.on('message', message => {
@@ -82,6 +89,7 @@ client.on('message', message => {
 			.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
 		return message.channel.send(errormessage1);
 	}
+
 });
 
 client.login(process.env.DISCORD_TOKEN);
