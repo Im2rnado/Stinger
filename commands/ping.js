@@ -8,7 +8,7 @@ module.exports = {
 			const ping = m.createdTimestamp - message.createdTimestamp;
 
 			// Then It Edits the message with the ping variable embed that you created
-			m.edit(`Your ping is ${ping}`);
+			m.edit(`**:ping_pong: Pong!**\nYour ping is \`${ping}\``);
 		});
 	},
 };2;
