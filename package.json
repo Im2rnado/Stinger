@@ -1,6 +1,6 @@
 {
   "name": "stinger-bot",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "description": "Discord bot that interacts with the Valorant API",
   "main": "index.js",
   "engines": {

@@ -33,7 +33,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if(message.channel.type === 'dm') {
-		client.channels.cache.get('743595649508835335').send(`**New Message**\n\nMessage Author: \`${message.author.tag}\`\nMessage Content: \`${message.content}\``);
+		client.channels.cache.get('743595649508835335').send(`**New Message**\n\nMessage Author: \`${message.author.tag}\`\nMessage Content: \`${message.content}\`\n——————————————————`);
 	}
 	if (message.author.bot) return;
 	if (message.content.indexOf(process.env.PREFIX) !== 0) return;
