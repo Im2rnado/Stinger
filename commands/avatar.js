@@ -5,6 +5,7 @@ module.exports = {
 	aliases: ['icon'],
 	description: 'Sends the avatar of the requested user!',
 	cooldown: 5,
+	guildOnly: true,
 	execute(message, args) {
 		if (args[0]) {
 			const user = message.mentions.users.first();

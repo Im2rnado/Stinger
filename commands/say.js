@@ -3,9 +3,18 @@ module.exports = {
 	description: 'Says anything you want!',
 	guildOnly: true,
 	execute(message, args) {
-		const sayMessage = args.join (' ');
-		message.delete().catch(err => console.log(err));
-		message.channel.send(sayMessage);
 
+		const {
+			member,
+		} = message;
+
+		if(
+			member.hasPermission('ADMINISTRATOR') ||
+            member.hasPermission('BAN_MEMBERS')
+		) {
+			const sayMessage = args.join (' ');
+			message.delete().catch(err => console.log(err));
+			message.channel.send(sayMessage);
+		}
 	},
 };

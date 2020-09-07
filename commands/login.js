@@ -20,6 +20,7 @@ module.exports = {
 		if (message.channel.type != 'dm') {
 			return message.channel.send('This command only works in DMs.');
 		}
+
 		if (!args[1]) {
 			return message.channel.send(yourEmbed);
 		}

@@ -5,6 +5,7 @@ module.exports = {
 	name: 'whois',
 	description: 'Displays information about a user.',
 	aliases: ['user-info'],
+	guildOnly: true,
 	execute(message) {
 		const userArray = message.content.split(' ');
 		const userArgs = userArray.slice(1);

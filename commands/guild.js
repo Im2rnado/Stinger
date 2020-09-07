@@ -5,6 +5,7 @@ module.exports = {
 	name: 'guild',
 	description: 'Displays information about a user.',
 	aliases: ['serverinfo', 'g', 'guildinfo', 'server'],
+	guildOnly: true,
 	execute(message) {
 		const userEmbed = new Discord.MessageEmbed()
 			.setTimestamp()

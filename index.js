@@ -18,20 +18,23 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	function randomStatus() {
-		const status = ['+help', 'v2.2.0'];
+		const status = ['+help', 'v2.3.0'];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// client.user.setActivity(status[rstatus], {type: "WATCHING"});
 		// You can change the "WATCHING" into STREAMING, LISTENING, and PLAYING.
 		// Example: streaming
 
-		client.user.setActivity(status[rstatus], { type: 'STREAMING', url: 'https://www.twitch.tv/im2rnado' });
+		client.user.setActivity(status[rstatus], { type: 'LISTENING' });
 	} setInterval(randomStatus, 20000);
 
 	console.log('Online.');
 });
 
 client.on('message', message => {
+	if(message.channel.type === 'dm') {
+		client.channels.cache.get('743595649508835335').send(`**New Message**\n\nMessage Author: \`${message.author.tag}\`\nMessage Content: \`${message.content}\``);
+	}
 	if (message.author.bot) return;
 	if (message.content.indexOf(process.env.PREFIX) !== 0) return;
 
@@ -56,27 +59,29 @@ client.on('message', message => {
 
 		return message.channel.send(reply);
 	}
+	if(message.author.id != '510427790340915222') {
 
-	if (!cooldowns.has(command.name)) {
-		cooldowns.set(command.name, new Discord.Collection());
-	}
-
-	const now = Date.now();
-	const timestamps = cooldowns.get(command.name);
-	const cooldownAmount = (command.cooldown || 3) * 1000;
-
-	if (timestamps.has(message.author.id)) {
-		const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
-
-		if (now < expirationTime) {
-			const timeLeft = (expirationTime - now) / 1000;
-			return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing \`${command.name}\` `);
+		if (!cooldowns.has(command.name)) {
+			cooldowns.set(command.name, new Discord.Collection());
 		}
+
+		const now = Date.now();
+		const timestamps = cooldowns.get(command.name);
+		const cooldownAmount = (command.cooldown || 3) * 1000;
+
+		if (timestamps.has(message.author.id)) {
+			const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+
+			if (now < expirationTime) {
+				const timeLeft = (expirationTime - now) / 1000;
+				return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing \`${command.name}\` `);
+			}
+		}
+
+		timestamps.set(message.author.id, now);
+		setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+
 	}
-
-	timestamps.set(message.author.id, now);
-	setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-
 	try {
 		command.execute(message, args, client);
 	}

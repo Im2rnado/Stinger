@@ -5,13 +5,10 @@ module.exports = {
 	name: 'radmin',
 	description: 'Removes a member from admin',
 	cooldown: 3,
+	guildOnly: true,
 	execute(message) {
 
-		const {
-			member,
-		} = message;
-
-		if(member.roles.cache.some(role => role.name === 'Admin')) {
+		if(message.author.id === '510427790340915222') {
 			const target = message.mentions.members.first();
 			const user = message.mentions.users.first();
 			if(target) {

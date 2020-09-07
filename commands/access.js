@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'access',
 	description: 'Checks if a user has Premium',
+	guildOnly: true,
 	execute(message) {
 		const member = message.mentions.members.first();
 		const user = message.mentions.users.first();

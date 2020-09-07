@@ -6,6 +6,7 @@ module.exports = {
 	description: 'Adds a member to premium',
 	aliases: ['grant'],
 	cooldown: 3,
+	guildOnly: true,
 	execute(message) {
 
 		const {

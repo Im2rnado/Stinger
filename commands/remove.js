@@ -4,6 +4,7 @@ module.exports = {
 	name: 'remove',
 	description: 'Removes a member from premium',
 	cooldown: 3,
+	guildOnly: true,
 	execute(message) {
 
 		const {

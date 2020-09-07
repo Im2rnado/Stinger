@@ -5,6 +5,7 @@ module.exports = {
 	description: 'Send your Suggestion',
 	aliases: ['sg'],
 	usage: 'suggest <message>',
+	guildOnly: true,
 	execute(message, args) {
 
 		if(!args.length) {

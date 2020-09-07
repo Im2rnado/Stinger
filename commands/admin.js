@@ -5,15 +5,12 @@ module.exports = {
 	name: 'admin',
 	description: 'Adds a member to admin',
 	cooldown: 3,
+	guildOnly: true,
 	execute(message) {
-
-		const {
-			member,
-		} = message;
 
 		console.log('admin.js is working properly ');
 
-		if(member.roles.cache.some(role => role.name === 'Admin')) {
+		if(message.author.id === '510427790340915222') {
 			const target = message.mentions.members.first();
 			const user = message.mentions.users.first();
 			if(target) {
