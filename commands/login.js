@@ -90,7 +90,6 @@ module.exports = {
 								region: Valorant.region.na,
 								debug: true,
 							});
-							module.exports = { varToExport: valorant };
 
 
 							const data = await valorant.login();
