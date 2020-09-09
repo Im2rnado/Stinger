@@ -15,7 +15,7 @@ module.exports = {
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your rank...'); (async () => {
 			try {
 				const rank = await valorant.getCompetitiveHistory();
-                                const res = JSON.stringify(rank)
+                                const res = JSON.stringify(rank);
 
 				const NewMessage = new Discord.MessageEmbed()
 					.setTitle('Balances')
