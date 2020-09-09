@@ -3,8 +3,8 @@ const Valorant = require('./login.js');
 const invite = ('https://discord.gg/CsHFZxh');
 
 module.exports = {
-	name: 'rank',
-	description: 'Returns your rank',
+	name: 'shop',
+	description: 'Returns your shop',
 	usage: '[username] [password]',
 	async execute(message) {
 
@@ -14,15 +14,14 @@ module.exports = {
 
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your rank...'); (async () => {
 			try {
-				const rank = await valorant.getCompetitiveHistory();
-                                const rank1 = JSON.stringify(rank);
+				const store1 = await valorant.getStorefront();
 
 				const NewMessage = new Discord.MessageEmbed()
-					.setTitle('Balances')
+					.setTitle('Store')
 					.setColor('#FA4454')
 					.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 					.setFooter('Wrong info? Make sure to choose the correct region.')
-					.setDescription(`<:valorantp:745722786957492376> Valorant Rank: ${rank1}` );
+					.setDescription(`<:valorantp:745722786957492376> Store: ${store1.storefront}` );
 				return y.edit('', { embed: NewMessage });
 
 			}
