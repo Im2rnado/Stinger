@@ -21,7 +21,7 @@ module.exports = {
 					.setColor('#FA4454')
 					.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 					.setFooter('Wrong info? Make sure to choose the correct region.')
-					.setDescription(`<:valorantp:745722786957492376> Valorant Rank: ${rank.res}` );
+					.setDescription(`<:valorantp:745722786957492376> Valorant Rank: ${rank.history}` );
 				return y.edit('', { embed: NewMessage });
 
 			}
