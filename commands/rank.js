@@ -15,14 +15,13 @@ module.exports = {
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your rank...'); (async () => {
 			try {
 				const rank = await valorant.getCompetitiveHistory();
-                                const res = JSON.stringify(rank);
 
 				const NewMessage = new Discord.MessageEmbed()
 					.setTitle('Balances')
 					.setColor('#FA4454')
 					.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 					.setFooter('Wrong info? Make sure to choose the correct region.')
-					.setDescription(`<:valorantp:745722786957492376> Valorant Rank: ${rank.res}` );
+					.setDescription(`<:valorantp:745722786957492376> Valorant Rank: ${rank}` );
 				return y.edit('', { embed: NewMessage });
 
 			}
