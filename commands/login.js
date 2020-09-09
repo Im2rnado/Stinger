@@ -43,7 +43,7 @@ module.exports = {
 							const Username = args[0];
 							const Password = args[1];
 
-							global.valorant = new Valorant.Client({
+							GLOBAL.valorant = new Valorant.Client({
 								username: `${Username}`,
 								password: `${Password}`,
 								region: Valorant.region.eu,
