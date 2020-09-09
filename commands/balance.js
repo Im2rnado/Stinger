@@ -12,7 +12,7 @@ module.exports = {
 			return message.channel.send('This command only works in DMs.');
 		}
 
-		const valorant = require('./login.js').varToExport;
+		const valorant = require('./login.js');
 
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your balance...'); (async () => {
 			try {
