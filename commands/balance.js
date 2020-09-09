@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const Valorant = require('./login.js');
 const invite = ('https://discord.gg/CsHFZxh');
 
 module.exports = {
@@ -11,8 +12,6 @@ module.exports = {
 		if (message.channel.type != 'dm') {
 			return message.channel.send('This command only works in DMs.');
 		}
-
-		const valorant = require('./login.js');
 
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your balance...'); (async () => {
 			try {
