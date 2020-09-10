@@ -14,9 +14,9 @@ module.exports = {
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your inventory...'); (async () => {
 			try {
 				const store = await valorant.getStoryContract();
-                                const store = JSON.stringify(store);
+                                const store1 = JSON.stringify(store);
 
-				return y.ediy(store, { split: true });
+				return y.ediy(store1, { split: true });
 
 			}
 			catch (error) {
