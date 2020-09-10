@@ -15,7 +15,7 @@ module.exports = {
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
                                 { name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },
 		        	{ name: 'Hosted by', value: 'heroku.com' },
-				{ name: 'Support Server', value: 'https://discord.gg/CsHFZxh' })
+				{ name: 'Support Server', value: '[Press Me!](https://discord.gg/CsHFZxh)' })
 			.setTimestamp();
 
 		return message.channel.send(yourEmbed);
