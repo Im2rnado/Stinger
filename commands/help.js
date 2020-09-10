@@ -14,7 +14,7 @@ module.exports = {
 		if (!args.length) {
 			const embed = new MessageEmbed()
 				.setTitle('Here are all of my commands:')
-				.setColor('#0000FF')
+				.setColor('RANDOM')
 				.setDescription(commands.map(command => command.name).join('\n'))
 				.setFooter(`Send ${process.env.PREFIX}help [command name] to get info on a specific command.`);
 
