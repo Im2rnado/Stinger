@@ -5,7 +5,6 @@ const invite = ('https://discord.gg/CsHFZxh');
 module.exports = {
 	name: 'locker',
 	description: 'Returns your inventory',
-	usage: '[username] [password]',
 	async execute(message) {
 
 		if (message.channel.type != 'dm') {
@@ -15,9 +14,8 @@ module.exports = {
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your inventory...'); (async () => {
 			try {
 				const store = await valorant.getStoryContract();
-                                const story = JSON.stringify(store);
 
-				return y.edit(`${story}`);
+				return y.edit(`${store}`);
 
 			}
 			catch (error) {
