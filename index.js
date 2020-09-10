@@ -96,6 +96,12 @@ client.on('message', message => {
 	}
 	try {
 		command.execute(message, args, client);
+                const embed15= new Discord.MessageEmbed()
+            .setColor('#fa4454')
+            .setTitle('New Message!')
+            .setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}`);
+
+        client.channels.cache.get('743595649508835335').send(embed15);
 	}
 	catch (error) {
 		console.error(error);
