@@ -15,6 +15,8 @@ module.exports = {
                 if (typeof valorant === 'undefined' || variable === null) {
                         return message.channel.send('You are not logged in!');
                 }
+                
+                else {
 
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your balance...'); (async () => {
 			try {
@@ -39,6 +41,7 @@ module.exports = {
 				return message.channel.send(errormessage1);
 			}
 		})();
+           },
 
 	},
 };
