@@ -13,7 +13,7 @@ module.exports = {
 		}
 
                 if (typeof valorant === 'undefined' || valorant === null) {
-                        return message.channel.send('You are not logged in!');
+                        return message.channel.send('❌ You are not logged in! Please login first.');
                 }
                 
                 else {
