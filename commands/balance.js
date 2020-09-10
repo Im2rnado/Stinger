@@ -12,7 +12,7 @@ module.exports = {
 			return message.channel.send('This command only works in DMs.');
 		}
 
-                if (typeof valorant === 'undefined' || variable === null) {
+                if (typeof valorant === 'undefined' || valorant === null) {
                         return message.channel.send('You are not logged in!');
                 }
                 
