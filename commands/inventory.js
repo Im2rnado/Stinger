@@ -14,10 +14,9 @@ module.exports = {
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your inventory...'); (async () => {
 			try {
 				const store = await valorant.getStoryContract();
-                                const store2 = JSON.stringify(store);
-                                const attachment = new Discord.MessageAttachment(store2)
+                                const store = JSON.stringify(store);
 
-				return y.edit(attachment);
+				return y.ediy(store, { split: true });
 
 			}
 			catch (error) {
