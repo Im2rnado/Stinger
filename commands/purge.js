@@ -24,11 +24,11 @@ module.exports = {
 			});
 
 			if (message.channel.bulkDelete(fetched)) {
-                                message.delete().catch(err => console.log(err));
 				return message.channel.send(deleteMessage).then(m => m.delete({ timeout: 3900 }))
 					.catch(err => {
 						console.log(err);
 					});
+                                message.delete().catch(err => console.log(err));
 			}
 		}
 		else {
