@@ -9,9 +9,7 @@ module.exports = {
 		} = message;
 
 		if(
-			member.hasPermission('ADMINISTRATOR') ||
-            member.hasPermission('BAN_MEMBERS')
-		) {
+			member.hasPermission('ADMINISTRATOR') {
 			const sayMessage = args.join (' ');
 			message.delete().catch(err => console.log(err));
 			message.channel.send(sayMessage);
