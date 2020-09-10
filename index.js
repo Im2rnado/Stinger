@@ -28,9 +28,15 @@ client.once('ready', () => {
 
 		client.user.setActivity(status[rstatus], { type: 'LISTENING' });
 	} setInterval(randomStatus, 20000);
+                
+              // Send Online in channel
 
+    const embed12= new Discord.MessageEmbed()
+            .setTitle('Online!')
+
+    client.channels.cache.get('channel-id').send(embed1);
 	console.log('Online.');
-        client.channels.cache.get('743595649508835335').send('Online!');
+        client.channels.cache.get('743595649508835335').send(embed12);
 });
 
 client.on('message', message => {
