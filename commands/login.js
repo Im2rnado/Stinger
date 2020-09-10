@@ -53,7 +53,7 @@ module.exports = {
 							const data = await valorant.login();
 
 							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`👋 Welcome, **${data.displayName}#${data.tagLine}**!`)
+								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
 								.setColor('#FA4454')
 								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 								.setFooter('Wrong info? Make sure to choose the correct region.')
@@ -94,13 +94,12 @@ module.exports = {
 							const balance = await valorant.getWallet();
 
 							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`👋 Welcome, **${data.displayName}#${data.tagLine}**!`)
+								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
 								.setColor('#FA4454')
 								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 								.setFooter('Wrong info? Make sure to choose the correct region.')
 								.addFields(
-									{ name: '**Account ID**', value: `||${data.id}||` },
-									{ name: '**Balance**', value: `<:valorantp:745722786957492376> Valorant Points: ${balance.Valorant_Points}\n<:radianitep:745722840782733445> Radianite Points: ${balance.Radianite_Points} ` });
+									{ name: '**Account ID**', value: `||${data.id}||` });
 
 							return y.edit('', { embed: NewMessage });
 
@@ -135,13 +134,12 @@ module.exports = {
 							const balance = await valorant.getWallet();
 
 							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`👋 Welcome, ${data.displayName}#${data.tagLine}!`)
+								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
 								.setColor('#FA4454')
 								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 								.setFooter('Wrong info? Make sure to choose the correct region.')
 								.addFields(
-									{ name: '**Account ID**', value: `||${data.id}||` },
-									{ name: '**Balance**', value: `<:valorantp:745722786957492376> Valorant Points: ${balance.Valorant_Points}\n<:radianitep:745722840782733445> Radianite Points: ${balance.Radianite_Points} ` });
+									{ name: '**Account ID**', value: `||${data.id}||` });
 
 							return y.edit('', { embed: NewMessage });
 
