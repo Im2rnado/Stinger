@@ -43,8 +43,8 @@ client.on('message', message => {
         if(message.channel.type === 'dm') {
                 const embed11= new Discord.MessageEmbed()
             .setColor('#fa4454')
-            .setTitle('New Message')
-            .setDescription(`Message Author: \`${message.author.tag}\`\nMessage Content: \`${message.content}\``);
+            .setTitle('**New Message**')
+            .setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}`);
 		client.channels.cache.get('743595649508835335').send(embed11);
 	}
 	if (message.author.bot) return;
