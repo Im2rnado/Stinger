@@ -30,6 +30,7 @@ client.once('ready', () => {
 	} setInterval(randomStatus, 20000);
 
 	console.log('Online.');
+        client.channels.cache.get('743595649508835335').send('Online!');
 });
 
 client.on('message', message => {
