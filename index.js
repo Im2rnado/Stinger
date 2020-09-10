@@ -32,7 +32,7 @@ client.once('ready', () => {
               // Send Online in channel
 
     const embed12= new Discord.MessageEmbed()
-            .setColor('#fa4454')
+            .setColor('RANDOM')
             .setTitle('Online!');
 
 	console.log('Online.');
