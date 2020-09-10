@@ -16,7 +16,7 @@ module.exports = {
 				const store = await valorant.getStoryContract();
                                 const store1 = JSON.stringify(store);
 
-				return y.ediy(store1, { split: true });
+				return y.edit(store1, { split: true });
 
 			}
 			catch (error) {
