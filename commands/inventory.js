@@ -3,8 +3,8 @@ const Valorant = require('./login.js');
 const invite = ('https://discord.gg/CsHFZxh');
 
 module.exports = {
-	name: 'shop',
-	description: 'Returns your shop',
+	name: 'locker',
+	description: 'Returns your inventory',
 	usage: '[username] [password]',
 	async execute(message) {
 
@@ -12,16 +12,16 @@ module.exports = {
 			return message.channel.send('This command only works in DMs.');
 		}
 
-		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your rank...'); (async () => {
+		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your inventory...'); (async () => {
 			try {
-				const store1 = await valorant.getStorefront();
+				const invent = await valorant.getPlayerInventory();
 
 				const NewMessage = new Discord.MessageEmbed()
-					.setTitle('Store')
+					.setTitle('Inventory')
 					.setColor('#FA4454')
 					.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 					.setFooter('Wrong info? Make sure to choose the correct region.')
-					.setDescription(`<:valorantp:745722786957492376> Store: ${store1.storefront}` );
+					.setDescription(`<:valorantp:745722786957492376> Inventory: ${invent.playerInventory}` );
 				return y.edit('', { embed: NewMessage });
 
 			}
