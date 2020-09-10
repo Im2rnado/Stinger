@@ -15,7 +15,7 @@ module.exports = {
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
                                 { name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },
 				{ name: 'Discord.js Version', value: 'discord.js@12.3.1' },
-		        	{ name: 'Hosted by', value: '[Heroku](https://heroku.com/)' },
+		        	{ name: 'Hosted by', value: 'heroku.com' },
 				{ name: 'Support Server', value: 'https://discord.gg/CsHFZxh' })
 			.setTimestamp();
 
