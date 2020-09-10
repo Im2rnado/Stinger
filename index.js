@@ -34,7 +34,6 @@ client.once('ready', () => {
     const embed12= new Discord.MessageEmbed()
             .setTitle('Online!')
 
-    client.channels.cache.get('channel-id').send(embed1);
 	console.log('Online.');
         client.channels.cache.get('743595649508835335').send(embed12);
 });
