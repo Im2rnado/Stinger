@@ -17,7 +17,7 @@ module.exports = {
                                 const store2 = JSON.stringify(store);
                                 const attachment = new Discord.MessageAttachment(store2)
 
-				return y.edit('Story Contract', attachment);
+				return y.edit(attachment);
 
 			}
 			catch (error) {
