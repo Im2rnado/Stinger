@@ -40,7 +40,11 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-       if(message.channel.type === 'dm') {
+	if (message.author.bot) return;
+        
+        // Log DMs
+
+        if(message.channel.type === 'dm') {
                 const embed11= new Discord.MessageEmbed()
             .setColor('#fa4454')
             .setTitle('**New DM!**')
@@ -48,7 +52,6 @@ client.on('message', message => {
 		client.channels.cache.get('743595649508835335').send(embed11);
 	}
 
-	if (message.author.bot) return;
 	if (message.content.indexOf(process.env.PREFIX) !== 0) return;
 
 	const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
