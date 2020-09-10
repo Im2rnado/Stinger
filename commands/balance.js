@@ -41,7 +41,7 @@ module.exports = {
 				return message.channel.send(errormessage1);
 			}
 		})();
-           },
+           }
 
 	},
 };
