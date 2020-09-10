@@ -12,6 +12,10 @@ module.exports = {
 			return message.channel.send('This command only works in DMs.');
 		}
 
+                if (typeof valorant === 'undefined' || variable === null) {
+                        return message.channel.send('You are not logged in!');
+                }
+
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your balance...'); (async () => {
 			try {
 				const balance = await valorant.getWallet();
