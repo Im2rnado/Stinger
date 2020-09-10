@@ -12,9 +12,10 @@ module.exports = {
 			.setThumbnail('https://cdn.discordapp.com/app-icons/743591965450305636/9288819898ed2298c59eba18d6de2ff8.png')
 			.addFields(
 				{ name: 'Current Bot Version', value: '2.3.0' },
-				{ name: 'Discord.js Version', value: '12.3.1' },
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
-				{ name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },
+                                { name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },
+				{ name: 'Discord.js Version', value: 'discord.js@12.3.1' },
+		        	{ name: 'Hosted by', value: '[Heroku](https://heroku.com/)' },
 				{ name: 'Support Server', value: 'https://discord.gg/CsHFZxh' })
 			.setTimestamp();
 
