@@ -47,14 +47,6 @@ client.on('message', message => {
             .setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}`);
 		client.channels.cache.get('743595649508835335').send(embed11);
 	}
-    
-        if(message.guild) {
-                const embed19= new Discord.MessageEmbed()
-            .setColor('#fa4454')
-            .setTitle('**New Message!**')
-            .setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}\n**Guild Name:** ${message.guild.name}`);
-		client.channels.cache.get('743595649508835335').send(embed19);
-	}
 
 	if (message.author.bot) return;
 	if (message.content.indexOf(process.env.PREFIX) !== 0) return;
