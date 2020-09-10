@@ -15,7 +15,7 @@ module.exports = {
 			try {
 				const store = await valorant.getStoryContract();
                                 const store2 = JSON.stringify(store);
-                                const attachment = new Discord.Attachment(store2)
+                                const attachment = new Discord.MessageAttachment(store2)
 
 				return y.edit('Story Contract', attachment);
 
