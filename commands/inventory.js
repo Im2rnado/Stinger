@@ -14,14 +14,15 @@ module.exports = {
 
 		const y = await message.channel.send('<a:loading:749963556316905494>  Getting your inventory...'); (async () => {
 			try {
-				const story = await valorant.getStoryContract();
+				const store = await valorant.getStoryContract();
+                                const story = JSON.stringify(store)
 
 				const NewMessage = new Discord.MessageEmbed()
 					.setTitle('Inventory')
 					.setColor('#FA4454')
 					.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
 					.setFooter('Wrong info? Make sure to choose the correct region.')
-					.setDescription(`<:valorantp:745722786957492376> Story: ${story.res}` );
+					.setDescription(`<:valorantp:745722786957492376> Story: ${story}` );
 				return y.edit('', { embed: NewMessage });
 
 			}
