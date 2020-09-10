@@ -5,6 +5,10 @@ module.exports = {
 	description: 'Says the servers rules!',
 	guildOnly: true,
 	execute(message) {
+
+                const {
+			member,
+		} = message;
       
                 if(member.hasPermission('ADMINISTRATOR')) {
 
