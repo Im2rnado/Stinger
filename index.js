@@ -98,7 +98,7 @@ client.on('message', message => {
 		command.execute(message, args, client);
                 const embed15= new Discord.MessageEmbed()
             .setColor('#fa4454')
-            .setTitle('New Message!')
+            .setTitle('**New Message!**')
             .setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}\n**Guild Name:** ${message.guild.name}`);
 
         client.channels.cache.get('743595649508835335').send(embed15);
