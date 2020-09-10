@@ -16,7 +16,7 @@ module.exports = {
 				const store = await valorant.getStoryContract();
                                 const story = JSON.stringify(store);
 
-				return y.edit(`${story}`);
+				return y.edit(story);
 
 			}
 			catch (error) {
