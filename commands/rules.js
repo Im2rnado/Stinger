@@ -5,6 +5,9 @@ module.exports = {
 	description: 'Says the servers rules!',
 	guildOnly: true,
 	execute(message) {
+      
+                if(member.hasPermission('ADMINISTRATOR')) {
+
 		message.delete().catch(err => console.log(err));
 
 		const yourEmbed = new Discord.MessageEmbed()
@@ -26,5 +29,6 @@ module.exports = {
 			.setFooter('Rules are subject to change at any time.', 'https://i.imgur.com/8rTKU7l.png');
 
 		return message.channel.send(yourEmbed);
+            }
 	},
 };
