@@ -19,7 +19,7 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	function randomStatus() {
-		const status = ['+help', 'v2.3.0'];
+		const status = ['+help', 'v2.3.2'];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// client.user.setActivity(status[rstatus], {type: "WATCHING"});
