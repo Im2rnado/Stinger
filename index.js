@@ -66,15 +66,6 @@ client.on('message', message => {
 		return message.react('🤡');
 	}
 
-	if (command.args && !args.length) {
-		let reply = `You didn't provide any arguments, ${message.author}!`;
-
-		if (command.usage) {
-			reply += `\nThe proper usage would be: \`${process.env.PREFIX}${command.name} ${command.usage}\``;
-		}
-
-		return message.channel.send(reply);
-	}
 	if(message.author.id != '510427790340915222') {
 
 		if (!cooldowns.has(command.name)) {
@@ -90,8 +81,11 @@ client.on('message', message => {
 
 			if (now < expirationTime) {
 				const timeLeft = (expirationTime - now) / 1000;
-				return message.reply(`Please wait ${timeLeft.toFixed(1)} more second(s) before reusing \`${command.name}\` `);
-			}
+				return message.reply(`Please wait ${timeLeft.toFixed(1)}s before reusing \`${command.name}\` `) .then(m => m.delete({ timeout: 3900 }))
+ 					.catch(err => {
+ 						console.log(err);
+ 					});
+ 			}
 		}
 
 		timestamps.set(message.author.id, now);
