@@ -76,7 +76,7 @@ module.exports = {
 					})();
 				}
 				if (reaction.emoji.name === '2️⃣') {
-                                        h.reactions.removeAll();
+                                        await h.delete();
 					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 						try {
 
@@ -118,7 +118,7 @@ module.exports = {
 					})();
 				}
 				if (reaction.emoji.name === '3️⃣') {
-                                        h.reactions.removeAll();
+                                        await h.delete();
 					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 						try {
 
