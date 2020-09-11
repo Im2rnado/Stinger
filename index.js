@@ -3,7 +3,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const invite = ('https://discord.gg/CsHFZxh');
 
-const client = new Discord.Client({ partials: ['MESSAGE', 'USER', 'REACTION'] });
+global.client = new Discord.Client({ partials: ['MESSAGE', 'USER', 'REACTION'] });
 client.commands = new Discord.Collection();
 client.sessions = new Discord.Collection();
 
