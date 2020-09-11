@@ -33,12 +33,7 @@ module.exports = {
 			}
 			catch (error) {
 				console.error(error.stack);
-				const errormessage1 = new Discord.MessageEmbed()
-					.setColor('#ffff00')
-					.setTitle('⚠️ **Uh  Oh! That was unexpected!**')
-					.setDescription(`An error has occurred and we're working on a fix ASAP!\nYou can [Join our Support Server](${invite}) and report it there.`)
-					.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
-				return message.channel.send(errormessage1);
+				return message.channel.send('❌ You are not logged in! Please login first.');
 			}
 		})();
            }
