@@ -65,9 +65,9 @@ module.exports = {
 
 						}
 						catch (error) {
-							console.error(error.stack);
-							return message.channel.send('❌ Invalid username or password!);
-						}
+				console.error(error.stack);
+				return message.channel.send('❌ Invalid username or password.');
+			}
 					})();
 				}
 				if (reaction.emoji.name === '2️⃣') {
@@ -102,9 +102,9 @@ module.exports = {
 
 						}
 						catch (error) {
-							console.error(error.stack);
-							return message.channel.send('❌ Invalid username or password!);
-						}
+				console.error(error.stack);
+				return message.channel.send('❌ Invalid username or password.');
+			}
 					})();
 				}
 				if (reaction.emoji.name === '3️⃣') {
@@ -138,9 +138,9 @@ module.exports = {
 
 						}
 						catch (error) {
-							console.error(error.stack);
-							return message.channel.send('❌ Invalid username or password!);
-						}
+				console.error(error.stack);
+				return message.channel.send('❌ Invalid username or password.');
+			}
 					})();
 				}
 			})
