@@ -33,7 +33,7 @@ module.exports = {
 			}
 			catch (error) {
 				console.error(error.stack);
-				return message.channel.send('❌ You are not logged in! Please login first.');
+				return y.edit('❌ You are not logged in! Please login first.');
 			}
 		})();
            }
