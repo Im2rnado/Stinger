@@ -4,11 +4,7 @@ module.exports = {
 	async execute(message) {
 		// It sends the user "Pinging"
 		message.channel.send('Pinging...').then(m =>{
-			// The math thingy to calculate the user's ping
-			const ping = m.createdTimestamp - message.createdTimestamp;
-
-			// Then It Edits the message with the ping variable embed that you created
-			m.edit(`**:ping_pong: Pong!**\nYour ping is \`${ping}\``);
-		});
+m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+}
 	},
 };2;
