@@ -105,8 +105,8 @@ client.on('message', message => {
 		console.error(error);
 		const errormessage1 = new Discord.MessageEmbed()
 			.setColor('#ffff00')
-			.setTitle('⚠️ **Uh  Oh! That was unexpected!**')
-			.setDescription(`An error has occurred and we're working on a fix ASAP!\nYou can [Join our Support Server](${invite}) and report it there.`)
+			.setTitle('⚠️ **Uh Oh! That was unexpected!**')
+			.setDescription(`There seems to be an error and we're working on a fix!\nYou can [Join our Support Server](${invite}) and report it there.`)
 			.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
 		return message.channel.send(errormessage1);
 	}
