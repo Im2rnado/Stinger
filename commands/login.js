@@ -66,12 +66,7 @@ module.exports = {
 						}
 						catch (error) {
 							console.error(error.stack);
-							const errormessage1 = new Discord.MessageEmbed()
-								.setColor('#ffff00')
-								.setTitle('⚠️ **Uh  Oh! That was unexpected!**')
-								.setDescription(`An error has occurred and we're working on a fix ASAP!\nYou can [Join our Support Server](${invite}) and report it there.`)
-								.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
-							return message.channel.send(errormessage1);
+							return message.channel.send('❌ Invalid username or password!);
 						}
 					})();
 				}
@@ -83,7 +78,7 @@ module.exports = {
 							const Username = args[0];
 							const Password = args[1];
 
-							const valorant = new Valorant.Client({
+							global.valorant = new Valorant.Client({
 								username: `${Username}`,
 								password: `${Password}`,
 								region: Valorant.region.na,
@@ -108,12 +103,7 @@ module.exports = {
 						}
 						catch (error) {
 							console.error(error.stack);
-							const errormessage1 = new Discord.MessageEmbed()
-								.setColor('#ffff00')
-								.setTitle('⚠️ **Uh  Oh! That was unexpected!**')
-								.setDescription(`An error has occurred and we're working on a fix ASAP!\nYou can [Join our Support Server](${invite}) and report it there!`)
-								.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
-							return message.channel.send(errormessage1);
+							return message.channel.send('❌ Invalid username or password!);
 						}
 					})();
 				}
@@ -125,7 +115,7 @@ module.exports = {
 							const Username = args[0];
 							const Password = args[1];
 
-							const valorant = new Valorant.Client({
+							global.valorant = new Valorant.Client({
 								username: `${Username}`,
 								password: `${Password}`,
 								region: Valorant.region.ap,
@@ -149,12 +139,7 @@ module.exports = {
 						}
 						catch (error) {
 							console.error(error.stack);
-							const errormessage1 = new Discord.MessageEmbed()
-								.setColor('#ffff00')
-								.setTitle('⚠️ **Uh  Oh! That was unexpected!**')
-								.setDescription(`An error has occurred and we're working on a fix ASAP!\nYou can [Join our Support Server](${invite}) and report it there.`)
-								.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
-							return message.channel.send(errormessage1);
+							return message.channel.send('❌ Invalid username or password!);
 						}
 					})();
 				}
