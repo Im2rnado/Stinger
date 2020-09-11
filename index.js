@@ -1,12 +1,17 @@
+// Modules
+
 require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 const invite = ('https://discord.gg/CsHFZxh');
 
+// Declare client
+
 global.client = new Discord.Client({ partials: ['MESSAGE', 'USER', 'REACTION'] });
 client.commands = new Discord.Collection();
 client.sessions = new Discord.Collection();
 
+// Command Handler
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -16,6 +21,8 @@ for (const file of commandFiles) {
 }
 
 const cooldowns = new Discord.Collection();
+
+// On ready
 
 client.once('ready', () => {
 	function randomStatus() {
@@ -39,7 +46,12 @@ client.once('ready', () => {
         client.channels.cache.get('743595649508835335').send(embed12);
 });
 
+// Listen to messages
+
 client.on('message', message => {
+
+        // Ignore bots
+
 	if (message.author.bot) return;
         
         // Log DMs
@@ -52,6 +64,8 @@ client.on('message', message => {
 		client.channels.cache.get('743595649508835335').send(embed11);
 	}
 
+        // Ignore non-prefix
+
 	if (message.content.indexOf(process.env.PREFIX) !== 0) return;
 
 	const args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/g);
@@ -62,9 +76,13 @@ client.on('message', message => {
 
 	if (!command) return;
 
+        // If guild only, react with clown 🤡 
+
 	if (command.guildOnly && message.channel.type === 'dm') {
 		return message.react('🤡');
 	}
+
+        // Cooldowns
 
 	if(message.author.id != '510427790340915222') {
 
