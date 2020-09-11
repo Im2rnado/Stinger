@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
 	name: 'restart',
 	description: 'List all of my commands or info about a specific command.', 
-        async execute(client, message, args) => {
+        async execute(client, message, args) {
 
     if(message.author.id != "510427790340915222") return message.react('🤡')
 
