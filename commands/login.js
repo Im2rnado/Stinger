@@ -37,7 +37,7 @@ module.exports = {
 				const reaction = collected.first();
 
 				if (reaction.emoji.name === '1️⃣') {
-                                        h.reactions.removeAll();
+                                        await h.delete();
 					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 						try {
 
