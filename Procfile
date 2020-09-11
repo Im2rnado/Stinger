@@ -1,1 +1,1 @@
-Worker: npm i dotenv
+Worker: node index.js
