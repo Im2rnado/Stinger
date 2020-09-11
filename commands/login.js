@@ -66,7 +66,7 @@ module.exports = {
 						}
 						catch (error) {
 				console.error(error.stack);
-				return message.channel.send('❌ Invalid username or password.');
+				return y.edit('❌ Invalid username or password.');
 			}
 					})();
 				}
@@ -103,7 +103,7 @@ module.exports = {
 						}
 						catch (error) {
 				console.error(error.stack);
-				return message.channel.send('❌ Invalid username or password.');
+				return y.edit('❌ Invalid username or password.');
 			}
 					})();
 				}
@@ -139,7 +139,7 @@ module.exports = {
 						}
 						catch (error) {
 				console.error(error.stack);
-				return message.channel.send('❌ Invalid username or password.');
+				return y.edit('❌ Invalid username or password.');
 			}
 					})();
 				}
