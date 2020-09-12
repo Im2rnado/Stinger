@@ -4,8 +4,8 @@ const hastebin = require('hastebin-gen');
 require('./login.js');
 
 module.exports = {
-	name: 'history',
-	description: 'Returns your history',
+	name: 'store',
+	description: 'Returns your store',
 	async execute(message) {
 
 		if (message.channel.type != 'dm') {
@@ -20,9 +20,10 @@ module.exports = {
 
 			const y = await message.channel.send('<a:loading:749963556316905494>  Getting your history...'); (async () => {
 				try {
-					const store = await valorant.getStorefront();
+					const store1 = await valorant.getStorefront();
+					const store = JSON.stringify(store1);
 
-					const haste = await hastebin(`${store}`, { extension: 'txt' });
+					const haste = await hastebin(`${store}`, { url: 'https://hasteb.in' }, { extension: 'txt' });
 
 					console.log(haste);
 
