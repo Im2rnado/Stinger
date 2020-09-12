@@ -41,9 +41,9 @@ client.once('ready', () => {
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('Online!');
+		.setTitle('Bot is online :)');
 
-	console.log('Online.');
+	console.log('Online!');
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
 
