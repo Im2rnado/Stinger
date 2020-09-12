@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // Modules
 
 require('dotenv').config();
