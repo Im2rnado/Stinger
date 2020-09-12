@@ -20,7 +20,7 @@ module.exports = {
 			.addField('Security Level', message.guild.verificationLevel, true)
 			.addField('Server Region', message.guild.region, true)
 			.addField('Created at', `${moment(message.guild.createdAt).format('MM/DD/YYYY')}`, true)
-			.setFooter('Deevloped by: tornado#0689');
+			.setFooter('Deevloped by im2rnado');
 
 		message.channel.send(userEmbed);
 	},

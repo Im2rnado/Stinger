@@ -24,7 +24,7 @@ module.exports = {
 			.setTitle(`Suggestion by ${message.author.username}`)
 			.setDescription(args.join(' '))
 			.setTimestamp()
-			.setFooter('Developed by tornado#0689');
+			.setFooter('Developed by im2rnado');
 
 
 		channel.send(embed).then(m => {
