@@ -13,5 +13,8 @@ module.exports = {
 			message.delete().catch(err => console.log(err));
 			message.channel.send(sayMessage);
 		}
+		else {
+			message.react('🤡');
+		}
 	},
 };
