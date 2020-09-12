@@ -35,36 +35,36 @@ client.once('ready', () => {
 
 		client.user.setActivity(status[rstatus], { type: 'LISTENING' });
 	} setInterval(randomStatus, 20000);
-                
-              // Send Online in channel
 
-    const embed12= new Discord.MessageEmbed()
-            .setColor('RANDOM')
-            .setTitle('Online!');
+	// Send Online in channel
+
+	const embed12 = new Discord.MessageEmbed()
+		.setColor('RANDOM')
+		.setTitle('Online!');
 
 	console.log('Online.');
-        client.channels.cache.get('743595649508835335').send(embed12);
+	client.channels.cache.get('743595649508835335').send(embed12);
 });
 
 // Listen to messages
 
 client.on('message', message => {
 
-        // Ignore bots
+	// Ignore bots
 
 	if (message.author.bot) return;
-        
-        // Log DMs
 
-        if(message.channel.type === 'dm') {
-                const embed11= new Discord.MessageEmbed()
-            .setColor('#fa4454')
-            .setTitle('**New DM!**')
-            .setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}`);
+	// Log DMs
+
+	if(message.channel.type === 'dm') {
+		const embed11 = new Discord.MessageEmbed()
+			.setColor('#fa4454')
+			.setTitle('**New DM!**')
+			.setDescription(`**Message Author:** ${message.author.tag}\n**Message Content:** ${message.content}`);
 		client.channels.cache.get('743595649508835335').send(embed11);
 	}
 
-        // Ignore non-prefix
+	// Ignore non-prefix
 
 	if (message.content.indexOf(process.env.PREFIX) !== 0) return;
 
@@ -76,13 +76,13 @@ client.on('message', message => {
 
 	if (!command) return;
 
-        // If guild only, react with clown 🤡 
+	// If guild only, react with clown 🤡
 
 	if (command.guildOnly && message.channel.type === 'dm') {
 		return message.react('🤡');
 	}
 
-        // Cooldowns
+	// Cooldowns
 
 	if(message.author.id != '510427790340915222') {
 
@@ -100,10 +100,10 @@ client.on('message', message => {
 			if (now < expirationTime) {
 				const timeLeft = (expirationTime - now) / 1000;
 				return message.reply(`Please wait ${timeLeft.toFixed(1)}s before reusing \`${command.name}\` `) .then(m => m.delete({ timeout: 3900 }))
- 					.catch(err => {
- 						console.log(err);
- 					});
- 			}
+					.catch(err => {
+						console.log(err);
+					});
+			}
 		}
 
 		timestamps.set(message.author.id, now);

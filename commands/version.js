@@ -13,8 +13,8 @@ module.exports = {
 			.addFields(
 				{ name: 'Current Bot Version', value: '2.3.0' },
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
-                                { name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },
-		        	{ name: 'Hosted by', value: 'heroku.com' },
+				{ name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnado)' },
+				{ name: 'Hosted by', value: 'heroku.com' },
 				{ name: 'Support Server', value: '[Press Me!](https://discord.gg/CsHFZxh)' })
 			.setTimestamp();
 

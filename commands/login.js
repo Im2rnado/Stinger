@@ -1,6 +1,5 @@
 const Valorant = require('valorant.js');
 const Discord = require('discord.js');
-const invite = ('https://discord.gg/CsHFZxh');
 const yourEmbed = new Discord.MessageEmbed()
 	.setColor('#FA4454')
 	.setTitle('**Please provide your username and password to login.**')
@@ -37,7 +36,7 @@ module.exports = {
 				const reaction = collected.first();
 
 				if (reaction.emoji.name === '1️⃣') {
-                                        await h.delete();
+					await h.delete();
 					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 						try {
 
@@ -65,13 +64,13 @@ module.exports = {
 
 						}
 						catch (error) {
-				console.error(error.stack);
-				return y.edit('❌ Invalid username or password.');
-			}
+							console.error(error.stack);
+							return y.edit('❌ Invalid username or password.');
+						}
 					})();
 				}
 				if (reaction.emoji.name === '2️⃣') {
-                                        await h.delete();
+					await h.delete();
 					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 						try {
 
@@ -88,8 +87,6 @@ module.exports = {
 
 							const data = await valorant.login();
 
-							const balance = await valorant.getWallet();
-
 							const NewMessage = new Discord.MessageEmbed()
 								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
 								.setColor('#FA4454')
@@ -102,13 +99,13 @@ module.exports = {
 
 						}
 						catch (error) {
-				console.error(error.stack);
-				return y.edit('❌ Invalid username or password.');
-			}
+							console.error(error.stack);
+							return y.edit('❌ Invalid username or password.');
+						}
 					})();
 				}
 				if (reaction.emoji.name === '3️⃣') {
-                                        await h.delete();
+					await h.delete();
 					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 						try {
 
@@ -124,8 +121,6 @@ module.exports = {
 
 							const data = await valorant.login();
 
-							const balance = await valorant.getWallet();
-
 							const NewMessage = new Discord.MessageEmbed()
 								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
 								.setColor('#FA4454')
@@ -138,9 +133,9 @@ module.exports = {
 
 						}
 						catch (error) {
-				console.error(error.stack);
-				return y.edit('❌ Invalid username or password.');
-			}
+							console.error(error.stack);
+							return y.edit('❌ Invalid username or password.');
+						}
 					})();
 				}
 			})
