@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const Valorant = require('valorant.js');
 const Discord = require('discord.js');
 const yourEmbed = new Discord.MessageEmbed()

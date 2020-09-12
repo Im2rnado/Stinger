@@ -4,8 +4,9 @@ const hastebin = require('hastebin-gen');
 require('./login.js');
 
 module.exports = {
-	name: 'store',
+	name: 'shop',
 	description: 'Returns your store',
+	aliases: ['store', 'st'],
 	async execute(message) {
 
 		if (message.channel.type != 'dm') {
