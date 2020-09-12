@@ -39,7 +39,7 @@ module.exports = {
 				if (index.post_hint !== 'image') {
 					const textembed = new Discord.RichEmbed()
 						.setTitle(subRedditName)
-						.setColor(9384170)
+						.setColor('RANDOM')
 						.setDescription(`[${title}](${link})\n\n${text}`)
 						.setURL(`https://reddit.com/${subRedditName}`);
 
@@ -49,7 +49,7 @@ module.exports = {
 				const imageembed = new Discord.MessageEmbed()
 					.setTitle(subRedditName)
 					.setImage(image)
-					.setColor(9384170)
+					.setColor('RANDOM')
 					.setDescription(`[${title}](${link})`)
 					.setURL(`https://reddit.com/${subRedditName}`);
 				message.channel.send(imageembed);
