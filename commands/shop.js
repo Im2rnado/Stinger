@@ -19,7 +19,7 @@ module.exports = {
 
 		else {
 
-			const y = await message.channel.send('<a:loading:749963556316905494>  Getting your history...'); (async () => {
+			const y = await message.channel.send('<a:loading:749963556316905494>  Getting your shop...'); (async () => {
 				try {
 					const store1 = await valorant.getStorefront();
 					const store = JSON.stringify(store1);
