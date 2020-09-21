@@ -34,7 +34,7 @@ module.exports = {
 							.setTitle('**Rank**')
 							.setColor('#FA4454')
 							.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
-							.setFooter('Wrong info? Make sure to choose the correct region.')
+							.setFooter('Wrong info? Make sure to choose the correct region at login.')
 							.setDescription(`${comphistory.History}`);
 						return y.edit('', { embed: NewMessage });
 

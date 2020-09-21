@@ -33,7 +33,7 @@ module.exports = {
 							.setTitle('**Balances**')
 							.setColor('#FA4454')
 							.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
-							.setFooter('Wrong info? Make sure to choose the correct region.')
+							.setFooter('Wrong info? Make sure to choose the correct region at login.')
 							.setDescription(`<:valorantp:745722786957492376> Valorant Points: **${balance.ValorantPoints}**\n<:radianitep:745722840782733445> Radianite Points: **${balance.RadianitePoints}**`);
 						return y.edit('', { embed: NewMessage });
 
