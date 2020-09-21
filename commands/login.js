@@ -16,132 +16,142 @@ module.exports = {
 	description: 'Logs in to your Valorant Account',
 	aliases: ['i', 'signin'],
 	usage: '[username] [password]',
-	async execute(message, args) {
-		if (message.channel.type != 'dm') {
-			return message.channel.send('This command only works in DMs.');
+	async execute(message, args, client) {
+		const tagName = message.author.id;
+
+		// equivalent to: SELECT * FROM tags WHERE name = 'tagName' LIMIT 1;
+		const tag = await Premium.findOne({ where: { name: tagName } });
+		if (tag) {
+
+			if (message.channel.type != 'dm') {
+				return message.channel.send('This command only works in DMs.');
+			}
+
+			if (!args[1]) {
+				return message.channel.send(yourEmbed);
+			}
+
+			const h = await message.channel.send(regionEmbed);
+			h.react('1️⃣').then(() => h.react('2️⃣')).then(() => h.react('3️⃣'));
+
+			const filter = (reaction, user) => {
+				return ['1️⃣', '2️⃣', '3️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
+			};
+
+			h.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+				.then(async collected => {
+					const reaction = collected.first();
+
+					if (reaction.emoji.name === '1️⃣') {
+						await h.delete();
+						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
+							try {
+
+								const Username = args[0];
+								const Password = args[1];
+
+								client.sessions.set(tagName, valorant = new Valorant.Client({
+									username: `${Username}`,
+									password: `${Password}`,
+									region: Valorant.region.eu,
+									debug: true,
+								}));
+
+								const data = await valorant.login();
+
+								const NewMessage = new Discord.MessageEmbed()
+									.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
+									.setColor('#FA4454')
+									.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
+									.setFooter('Wrong info? Make sure to choose the correct region.')
+									.addFields(
+										{ name: '**Account ID**', value: `||${data.id}||` });
+
+								return y.edit('', { embed: NewMessage });
+
+							}
+							catch (error) {
+								console.error(error.stack);
+								return y.edit('❌ Invalid username or password.');
+							}
+						})();
+					}
+					if (reaction.emoji.name === '2️⃣') {
+						await h.delete();
+						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
+							try {
+
+								const Username = args[0];
+								const Password = args[1];
+
+								global.valorant = new Valorant.Client({
+									username: `${Username}`,
+									password: `${Password}`,
+									region: Valorant.region.na,
+									debug: true,
+								});
+
+
+								const data = await valorant.login();
+
+								const NewMessage = new Discord.MessageEmbed()
+									.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
+									.setColor('#FA4454')
+									.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
+									.setFooter('Wrong info? Make sure to choose the correct region.')
+									.addFields(
+										{ name: '**Account ID**', value: `||${data.id}||` });
+
+								return y.edit('', { embed: NewMessage });
+
+							}
+							catch (error) {
+								console.error(error.stack);
+								return y.edit('❌ Invalid username or password.');
+							}
+						})();
+					}
+					if (reaction.emoji.name === '3️⃣') {
+						await h.delete();
+						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
+							try {
+
+								const Username = args[0];
+								const Password = args[1];
+
+								global.valorant = new Valorant.Client({
+									username: `${Username}`,
+									password: `${Password}`,
+									region: Valorant.region.ap,
+									debug: true,
+								});
+
+								const data = await valorant.login();
+
+								const NewMessage = new Discord.MessageEmbed()
+									.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
+									.setColor('#FA4454')
+									.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
+									.setFooter('Wrong info? Make sure to choose the correct region.')
+									.addFields(
+										{ name: '**Account ID**', value: `||${data.id}||` });
+
+								return y.edit('', { embed: NewMessage });
+
+							}
+							catch (error) {
+								console.error(error.stack);
+								return y.edit('❌ Invalid username or password.');
+							}
+						})();
+					}
+				})
+				.catch(collected => {
+					console.log(`${collected.size}`);
+				});
 		}
-
-		if (!args[1]) {
-			return message.channel.send(yourEmbed);
+		else {
+			message.react('🤡');
 		}
-
-		const h = await message.channel.send(regionEmbed);
-		h.react('1️⃣').then(() => h.react('2️⃣')).then(() => h.react('3️⃣'));
-
-		const filter = (reaction, user) => {
-			return ['1️⃣', '2️⃣', '3️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
-		};
-
-		h.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-			.then(async collected => {
-				const reaction = collected.first();
-
-				if (reaction.emoji.name === '1️⃣') {
-					await h.delete();
-					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
-						try {
-
-							const Username = args[0];
-							const Password = args[1];
-
-							global.valorant = new Valorant.Client({
-								username: `${Username}`,
-								password: `${Password}`,
-								region: Valorant.region.eu,
-								debug: true,
-							});
-
-							const data = await valorant.login();
-
-							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
-								.setColor('#FA4454')
-								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
-								.setFooter('Wrong info? Make sure to choose the correct region.')
-								.addFields(
-									{ name: '**Account ID**', value: `||${data.id}||` });
-
-							return y.edit('', { embed: NewMessage });
-
-						}
-						catch (error) {
-							console.error(error.stack);
-							return y.edit('❌ Invalid username or password.');
-						}
-					})();
-				}
-				if (reaction.emoji.name === '2️⃣') {
-					await h.delete();
-					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
-						try {
-
-							const Username = args[0];
-							const Password = args[1];
-
-							global.valorant = new Valorant.Client({
-								username: `${Username}`,
-								password: `${Password}`,
-								region: Valorant.region.na,
-								debug: true,
-							});
-
-
-							const data = await valorant.login();
-
-							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
-								.setColor('#FA4454')
-								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
-								.setFooter('Wrong info? Make sure to choose the correct region.')
-								.addFields(
-									{ name: '**Account ID**', value: `||${data.id}||` });
-
-							return y.edit('', { embed: NewMessage });
-
-						}
-						catch (error) {
-							console.error(error.stack);
-							return y.edit('❌ Invalid username or password.');
-						}
-					})();
-				}
-				if (reaction.emoji.name === '3️⃣') {
-					await h.delete();
-					const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
-						try {
-
-							const Username = args[0];
-							const Password = args[1];
-
-							global.valorant = new Valorant.Client({
-								username: `${Username}`,
-								password: `${Password}`,
-								region: Valorant.region.ap,
-								debug: true,
-							});
-
-							const data = await valorant.login();
-
-							const NewMessage = new Discord.MessageEmbed()
-								.setTitle(`**👋 Welcome, ${data.displayName}#${data.tagLine}!**`)
-								.setColor('#FA4454')
-								.setThumbnail('https://www.m5.academy/img/valorant_logo.png')
-								.setFooter('Wrong info? Make sure to choose the correct region.')
-								.addFields(
-									{ name: '**Account ID**', value: `||${data.id}||` });
-
-							return y.edit('', { embed: NewMessage });
-
-						}
-						catch (error) {
-							console.error(error.stack);
-							return y.edit('❌ Invalid username or password.');
-						}
-					})();
-				}
-			})
-			.catch(collected => {
-				console.log(`${collected.size}`);
-			});
 	},
 };

@@ -4,11 +4,12 @@
 require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
+const Sequelize = require('sequelize');
 const invite = ('https://discord.gg/CsHFZxh');
 
 // Declare client
 
-global.client = new Discord.Client({ partials: ['MESSAGE', 'USER', 'REACTION'] });
+const client = new Discord.Client({ partials: ['MESSAGE', 'USER', 'REACTION'] });
 client.commands = new Discord.Collection();
 client.sessions = new Discord.Collection();
 
@@ -21,13 +22,32 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
+// Cooldowns
+
 const cooldowns = new Discord.Collection();
+
+// Database
+
+global.sequelize = new Sequelize('database', 'username', 'password', {
+	host: 'localhost',
+	dialect: 'sqlite',
+	logging: false,
+	// SQLite only
+	storage: 'database.sqlite',
+});
+
+global.Premium = sequelize.define('premium', {
+	name: {
+		type: Sequelize.STRING,
+		unique: true,
+	},
+});
 
 // On ready
 
 client.once('ready', () => {
 	function randomStatus() {
-		const status = ['+help', 'v2.3.5', `${client.users.cache.size} users`];
+		const status = ['+help', 'v3.0.0', `${client.users.cache.size} users`];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// client.user.setActivity(status[rstatus], {type: "WATCHING"});
@@ -45,6 +65,8 @@ client.once('ready', () => {
 
 	console.log('Online!');
 	client.channels.cache.get('743595649508835335').send(embed12);
+
+	Premium.sync();
 });
 
 // Listen to messages
@@ -112,7 +134,7 @@ client.on('message', message => {
 
 	}
 	try {
-		command.execute(message, args);
+		command.execute(message, args, client);
 	}
 	catch (error) {
 		console.error(error);

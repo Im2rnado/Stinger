@@ -1,23 +1,25 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 /* eslint-disable no-shadow */
 const Discord = require('discord.js');
 
 module.exports = {
 	name: 'add',
-	description: 'Adds a member to premium',
+	description: 'MOD ONLY!',
 	aliases: ['grant'],
-	cooldown: 3,
-	guildOnly: true,
-	execute(message) {
+	async execute(message) {
+		if(message.author.id !== '510427790340915222') {
+			message.react('🤡');
+		}
 
-		const {
-			member,
-		} = message;
+		const target = message.mentions.members.first();
+		const user = message.mentions.users.first();
 
-		console.log('add.js is working properly ');
-
-		if(member.roles.cache.some(role => role.name === 'Admin')) {
-			const target = message.mentions.members.first();
-			const user = message.mentions.users.first();
+		try {
+			// equivalent to: INSERT INTO tags (name, descrption, username) values (?, ?, ?);
+			await Premium.create({
+				name: user.id,
+			});
 			if(target) {
 				const role = message.guild.roles.cache.find(role => role.name === 'Premium');
 				if(role) {
@@ -39,9 +41,13 @@ module.exports = {
 			else {
 				message.channel.send('Please specify who you want to add to premium.');
 			}
+			return message.channel.send(otherIconEmbed);
 		}
-		else {
-			message.react('🤡');
+		catch (e) {
+			if (e.name === 'SequelizeUniqueConstraintError') {
+				return message.reply('That user already has premium.');
+			}
+			return message.reply('Something went wrong with adding a user.');
 		}
 	},
 };
