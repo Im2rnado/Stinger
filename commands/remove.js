@@ -27,7 +27,7 @@ module.exports = {
 					.setColor('#FF0000')
 					.setThumbnail(user.displayAvatarURL())
 					.setTimestamp()
-					.setFooter(`Requested by: ${message.author.tag}`, `${message.author.displayAvatarURL()}`);
+					.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 
 				return message.channel.send(otherIconEmbed);
 			}

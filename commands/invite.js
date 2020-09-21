@@ -8,7 +8,7 @@ module.exports = {
 			.setColor('#0099ff')
 			.setTitle('Invite Stinger')
 			.setDescription(':mailbox: [Press Me](https://discord.com/api/oauth2/authorize?client_id=743591965450305636&permissions=8&scope=bot)')
-			.setFooter(`Requested By: ${message.author.tag}`);
+			.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 		return message.channel.send(yourEmbed);
 	},
 };
