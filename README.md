@@ -2,7 +2,7 @@
 
 # <img src="https://cdn.publish0x.com/prod/fs/images/6ac0ff5feb2e723eaa18dace82b96ab9aca5ed93038ad2d739f3d58132cc3bed.png" width="55px" draggable="false"><b> </b>Stinger &middot; Discord Bot
 
-### ![version](https://img.shields.io/badge/Version-3.0-brightgreen.svg?style=for-the-badge) [![Discord](https://img.shields.io/discord/493130730549805057.svg?style=for-the-badge)](https://discord.gg/WvfVZ8T) [![Chrome Web Store](https://img.shields.io/chrome-web-store/d/agjnjboanicjcpenljmaaigopkgdnihi.svg?label=Chrome&logo=google%20chrome&logoColor=white&colorA=4285F4&style=for-the-badge)](https://chrome.google.com/webstore/detail/premid/agjnjboanicjcpenljmaaigopkgdnihi)
+### ![version](https://img.shields.io/badge/Version-3.0-brightgreen.svg?style=for-the-badge) [![Discord](https://img.shields.io/discord/743594467277406458.svg?style=for-the-badge)](https://discord.gg/hKpcjhK)
 
 <img src="gitassets/PreMiDExample.png">
 
