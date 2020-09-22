@@ -23,14 +23,14 @@ module.exports = {
 				const role = message.guild.roles.cache.find(role => role.name === 'Muted');
 				if(role) {
 					target.roles.remove(role);
-					message.channel.send(`${target} was unmuted!`);
+					message.channel.send(`Speak! ${target}`);
 				}
 				else{
-					message.channel.send(`${target} isn't muted>`);
+					message.channel.send(`${target} isn't muted tho...`);
 				}
 			}
 			else {
-				message.channel.send('Please specify who you want to unmute.');
+				message.channel.send('And whom do i unmute?.');
 			}
 		}
 		else {
