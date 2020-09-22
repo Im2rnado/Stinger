@@ -49,4 +49,4 @@ You can check out our guide on how to get started at [#get-started](https://disc
 
 
 
-### This project is _NOT_ affiliated, authorized, endorsed by, or in any way related to Riot Games.
+### This project is *NOT* affiliated, authorized, endorsed by, or in any way related to Riot Games.
