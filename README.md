@@ -37,7 +37,7 @@
 
 ## Contributing
 
-If you're interested in helping us visit the [LOCALIZATION.md](LOCALIZATION.md)
+If you're interested in helping us, contact [Tornado](https://twitter.com/im2rnadoo)
 
 # Support
 
