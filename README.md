@@ -20,7 +20,7 @@
 
 # About
 
-**PreMiD** is a simple, configurable utility that allows you to show what you're watching/listening in your Discord **now playing status**. It supports [many different platforms](#support), and will support multiple users watching the same content simultaneously in an upcoming update.
+**Stinger** is a simple, configurable bot that allows you to login to your Valorant account right from your device.
 
 # Features
 
@@ -29,30 +29,6 @@
 - Automatically clears your current presence after 1 minute of inactivity.
 - Supports **YouTube, YouTube Music, Netflix, SoundCloud** and many more to come.
 - _Watch parties and more are coming soon!_
-
-# Table of contents
-
-- [About](#about)
-  - [Summary](#summary)
-  - [Features](#features)
-- [Localization](#localization)
-  - [Contributing](#contributing)
-- [Support](#support)
-  - [Operating Systems](#operating-systems)
-  - [Services](#services)
-- [Installation](#installation)
-  - [Extension](#extension)
-    - Chrome
-    - Firefox
-    - Opera
-  - [Application](#application)
-    - Mac OS
-    - Windows
-    - Linux
-
-# Localization
-
-Our application has a lot of languages included and we are happy to see a new translators in our little project.
 
 ## Contributing
 
