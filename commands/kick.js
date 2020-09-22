@@ -20,10 +20,10 @@ module.exports = {
 			if(target) {
 				const targetMember = message.guild.members.cache.get(target.id);
 				targetMember.kick();
-				message.channel.send(`${target} was kicked from the server!`);
+				message.channel.send(`**${target} was kicked!**\nhttps://media3.giphy.com/media/l3V0j3ytFyGHqiV7W/giphy.gif`);
 			}
 			else {
-				message.channel.send('Please specify who you want to kick.');
+				message.channel.send('And who should i kick?');
 			}
 		}
 		else {
