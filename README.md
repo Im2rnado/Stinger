@@ -35,19 +35,19 @@
 - Show your Daily Shop
 - And tons of more features that get added frequently!
 
-## Is it free?
+# Is it free?
 
 Stinger costs $5 and can be purchased from [Tornado](https://twitter.com/im2rnadoo) but there are also several ways to obtain Premium access to the bot. You can win from giveaways which we constantly do or if you contribute to the bot, you get free access!
 
-## Contributing
+# Contributing
 
 If you're interested in helping us, contact [Tornado](https://twitter.com/im2rnadoo).
 
-## I purchased Stinger, what's next?
+# I purchased Stinger, what's next?
 
 You can check out our guide on how to get started at [#get-started](https://discord.com/channels/743594467277406458/743596016980459661) or use +help to get a full list of all commands!
 
-# **This project is __NOT__ affiliated, authorized, endorsed by, or in any way related to Riot Games.**
+### **This project is __NOT__ affiliated, authorized, endorsed by, or in any way related to Riot Games.**
 
 
 [![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/0)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/0)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/1)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/1)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/2)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/2)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/3)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/3)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/4)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/4)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/5)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/5)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/6)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/6)[![](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/images/7)](https://sourcerer.io/fame/Timeraa/Timeraa/PreMiD/links/7)
