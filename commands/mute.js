@@ -22,7 +22,7 @@ module.exports = {
 				if(role) {
 					target.roles.add(role);
 					target.roles.remove(rolemember);
-					message.channel.send(`${target} was Muted!`);
+					message.channel.send(`${target} was Muted!\nhttp://gph.is/2908kxV`);
 				}
 				else{
 					message.channel.send('Please add a role to this server with the name \'Muted\'.');
