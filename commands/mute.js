@@ -22,14 +22,14 @@ module.exports = {
 				if(role) {
 					target.roles.add(role);
 					target.roles.remove(rolemember);
-					message.channel.send(`${target} was Muted!\nhttp://gph.is/2908kxV`);
+					message.channel.send(`**${target} was Muted!**\nhttp://gph.is/2908kxV`);
 				}
 				else{
-					message.channel.send('How can i mute someone with a role called \'Muted\' in this server?.');
+					message.channel.send('**How can i mute someone with a role called \'Muted\' in this server?**');
 				}
 			}
 			else {
-				message.channel.send('And who do you want me to ~~kill~~ shush?');
+				message.channel.send('**And who do you want me to ~~kill~~ shush?**');
 			}
 		}
 		else {
