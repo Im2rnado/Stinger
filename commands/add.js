@@ -11,7 +11,7 @@ module.exports = {
 		if(message.author.id !== '510427790340915222') {
 			message.react('🤡');
 		}
-
+                else {
 		const target = message.mentions.members.first();
 		const user = message.mentions.users.first();
 
@@ -49,5 +49,6 @@ module.exports = {
 			}
 			return message.reply('Something went wrong with adding a user.');
 		}
+            }
 	},
 };
