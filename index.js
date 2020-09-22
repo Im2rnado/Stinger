@@ -69,6 +69,34 @@ client.once('ready', () => {
 	Premium.sync();
 });
 
+client.once('guildCreate', guild => {
+    console.log("Joined a new guild: " + guild.name);
+    //Your other stuff like adding to guildArray
+
+	// Send Online in channel
+
+	const embed12 = new Discord.MessageEmbed()
+		.setColor('RANDOM')
+		.setTitle('Someone added the bot!')
+                .setDescription(`**Guild Name:** ${guild.name}`);
+
+	client.channels.cache.get('743595649508835335').send(embed12);
+});
+
+client.once('guildDelete', guild => {
+    console.log("Joined a new guild: " + guild.name);
+    //Your other stuff like adding to guildArray
+
+	// Send Online in channel
+
+	const embed12 = new Discord.MessageEmbed()
+		.setColor('RANDOM')
+		.setTitle('Someone removed the bot :\(')
+                .setDescription(`**Guild Name:** ${guild.name}`);
+
+	client.channels.cache.get('743595649508835335').send(embed12);
+});
+
 // Listen to messages
 
 client.on('message', message => {
