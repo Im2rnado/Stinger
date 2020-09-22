@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 const yourEmbed = new Discord.MessageEmbed()
 	.setColor('#FA4454')
 	.setTitle('**Please provide your username and password to login.**')
-	.setDescription('*Example:* +login <username> <password>');
+	.setDescription('*Example:* +login username password');
 
 const regionEmbed = new Discord.MessageEmbed()
 	.setColor('#FA4454')
