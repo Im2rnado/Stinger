@@ -12,7 +12,7 @@
 
   <ol>
 
-#### BitCoin: `18WHUcQbThwExKhUyLGPRFUGSwFqftpsEn`
+#### BitCoin: `1F2gwh4U4KHk2n8eWEKtwsfMxgh9ibUMtn`
 
   </ol>
 </details>
@@ -20,15 +20,20 @@
 
 # About
 
-**Stinger** is a simple, configurable bot that allows you to login to your Valorant account right from your device.
+**Stinger** is a simple, discord bot that allows you to login to your Valorant account right from your device.
 
 # Features
 
-- Integrates with Discord's official Rich Presence API library.
-- Supports your keyboard's **Media Control** function keys.
-- Automatically clears your current presence after 1 minute of inactivity.
-- Supports **YouTube, YouTube Music, Netflix, SoundCloud** and many more to come.
-- _Watch parties and more are coming soon!_
+- Show your Account Name and Tag
+- Show your Account ID
+- Show your Valorant Points
+- Show your Radianite Points
+- Show your Rank
+- Show your Match History
+- Show your Competitive History
+- Show your Story Contract
+- Show your Daily Shop
+- And tons of more features that get added frequently!
 
 ## Contributing
 
