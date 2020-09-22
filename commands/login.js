@@ -151,7 +151,7 @@ module.exports = {
 				});
 		}
 		else {
-			message.channel.send('**You don't have premium! DM @tornado#9999 to buy Premium**');
+			message.channel.send('**You don\'t have premium! DM @tornado#9999 to buy Premium**');
 		}
 	},
 };
