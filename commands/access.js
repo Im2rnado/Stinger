@@ -8,6 +8,7 @@ module.exports = {
 		if(message.author.id !== '510427790340915222') {
 			message.react('🤡');
 		}
+                else {
 		if (!args.length) {
 			// equivalent to: SELECT name FROM tags;
 			const tagList = await Premium.findAll({ attributes: ['name'] });
@@ -34,5 +35,6 @@ module.exports = {
 			.setColor('#FF0000')
 			.setTitle(`Nope, **${user.tag}** doesn't have Premium!`);
 		return message.channel.send(embedno);
+           }
 	},
 };
