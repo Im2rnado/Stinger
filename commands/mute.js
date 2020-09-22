@@ -25,11 +25,11 @@ module.exports = {
 					message.channel.send(`${target} was Muted!\nhttp://gph.is/2908kxV`);
 				}
 				else{
-					message.channel.send('Please add a role to this server with the name \'Muted\'.');
+					message.channel.send('How can i mute someone with a role called \'Muted\' in this server?.');
 				}
 			}
 			else {
-				message.channel.send('Please specify who you want to mute.');
+				message.channel.send('And who do you want me to ~~kill~~ shush?');
 			}
 		}
 		else {
