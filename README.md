@@ -20,7 +20,7 @@
 
 # About
 
-**Stinger** is a simple Discord Bot that let's you login to your Valorant account and access 15+ commands!
+**Stinger** is a simple **Discord Bot** that let's you login to your Valorant account and access 15+ commands!
 
 # Features
 
@@ -49,4 +49,4 @@ You can check out our guide on how to get started at [#get-started](https://disc
 
 
 
-### This project is __NOT__ affiliated, authorized, endorsed by, or in any way related to Riot Games.
+### This project is _NOT_ affiliated, authorized, endorsed by, or in any way related to Riot Games.
