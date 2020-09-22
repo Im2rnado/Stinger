@@ -4,8 +4,6 @@
 
 ### ![version](https://img.shields.io/badge/Version-3.0-brightgreen.svg?style=for-the-badge) [![Discord](https://img.shields.io/discord/743594467277406458.svg?style=for-the-badge)](https://discord.gg/hKpcjhK)
 
-<img src="gitassets/PreMiDExample.png">
-
 <a target="_blank" href="https://discord.gg/hKpcjhK" title="Join our Discord!">
 <img draggable="false" src="https://discordapp.com/api/guilds/743594467277406458/widget.png?style=banner2" height="76px" draggable="false" alt="Join my Discord!">
 </a>
