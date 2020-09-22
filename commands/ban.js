@@ -23,7 +23,7 @@ module.exports = {
 				message.channel.send(`${target} was banned from the server! `);
 			}
 			else {
-				message.channel.send('Please specify who you want to ban.');
+				message.channel.send('And who do you want me to ban?\nhttps://i.imgur.com/RkIfjMP.gif');
 			}
 		}
 		else {
