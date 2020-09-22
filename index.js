@@ -73,25 +73,25 @@ client.once('guildCreate', guild => {
     console.log("Joined a new guild: " + guild.name);
     //Your other stuff like adding to guildArray
 
-	// Send Online in channel
+	// Send Added in channel
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('Someone added the bot!')
+		.setTitle('**Someone added the bot :\)**')
                 .setDescription(`**Guild Name:** ${guild.name}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
 
 client.once('guildDelete', guild => {
-    console.log("Joined a new guild: " + guild.name);
+    console.log("Removed from a guild: " + guild.name);
     //Your other stuff like adding to guildArray
 
-	// Send Online in channel
+	// Send Removed in channel
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('Someone removed the bot :\(')
+		.setTitle('**Someone removed the bot :\(**')
                 .setDescription(`**Guild Name:** ${guild.name}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
