@@ -7,15 +7,6 @@
 <a target="_blank" href="https://discord.gg/hKpcjhK" title="Join our Discord!">
 <img draggable="false" src="https://discordapp.com/api/guilds/743594467277406458/widget.png?style=banner2" height="76px" draggable="false" alt="Join my Discord!">
 </a>
-<details>
-  <summary><b><u>Other options</u></b> (Click to expand)</summary>
-
-  <ol>
-
-#### BitCoin: `1F2gwh4U4KHk2n8eWEKtwsfMxgh9ibUMtn`
-
-  </ol>
-</details>
 </div>
 
 # About
@@ -38,6 +29,15 @@
 # Is it free?
 
 Stinger costs $5 and can be purchased from [Tornado](https://twitter.com/im2rnadoo) but there are also several ways to obtain Premium access to the bot. You can win giveaways which we constantly do or if you contribute to the bot, you get free access!
+<details>
+  <summary><b><u>Buy Now</u></b> (Click to expand)</summary>
+
+  <ol>
+
+#### BitCoin: `1F2gwh4U4KHk2n8eWEKtwsfMxgh9ibUMtn`
+
+  </ol>
+</details>
 
 # Contributing
 
