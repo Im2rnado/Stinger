@@ -37,7 +37,7 @@
 
 # Is it free?
 
-Stinger costs $5 and can be purchased from [Tornado](https://twitter.com/im2rnadoo) but there are also several ways to obtain Premium access to the bot. You can win from giveaways which we constantly do or if you contribute to the bot, you get free access!
+Stinger costs $5 and can be purchased from [Tornado](https://twitter.com/im2rnadoo) but there are also several ways to obtain Premium access to the bot. You can win giveaways which we constantly do or if you contribute to the bot, you get free access!
 
 # Contributing
 
