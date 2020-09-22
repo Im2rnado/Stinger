@@ -12,10 +12,6 @@
 
   <ol>
 
-<a target="_blank" href="https://ko-fi.com/E1E1HLLE"><img draggable="false" height="56px" src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
-
-<a target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZU8Q766ACS2WS&lc=US"><img src="gitassets/PayPal.svg" height="56px" draggable="false" alt="PayPal"></a>
-
 #### BitCoin: `18WHUcQbThwExKhUyLGPRFUGSwFqftpsEn`
 
   </ol>
