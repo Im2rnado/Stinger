@@ -7,7 +7,6 @@
 <a target="_blank" href="https://discord.gg/hKpcjhK" title="Join our Discord!">
 <img draggable="false" src="https://discordapp.com/api/guilds/743594467277406458/widget.png?style=banner2" height="76px" draggable="false" alt="Join my Discord!">
 </a>
-<a target="_blank" href="https://www.patreon.com/bePatron?u=4610890" data-patreon-widget-type="become-patron-button"><img src="gitassets/patreonBTN.png" draggable="false" height="76px" alt="Support me on Patreon!"></a>
 <details>
   <summary><b><u>Other options</u></b> (Click to expand)</summary>
 
