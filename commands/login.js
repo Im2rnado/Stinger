@@ -84,12 +84,12 @@ module.exports = {
 								const Username = args[0];
 								const Password = args[1];
 
-								global.valorant = new Valorant.Client({
+								client.sessions.set(tagName, valorant = new Valorant.Client({
 									username: `${Username}`,
 									password: `${Password}`,
-									region: Valorant.region.na,
+									region: Valorant.region.eu,
 									debug: true,
-								});
+								}));
 
 
 								const data = await valorant.login();
@@ -119,12 +119,12 @@ module.exports = {
 								const Username = args[0];
 								const Password = args[1];
 
-								global.valorant = new Valorant.Client({
+								client.sessions.set(tagName, valorant = new Valorant.Client({
 									username: `${Username}`,
 									password: `${Password}`,
-									region: Valorant.region.ap,
+									region: Valorant.region.eu,
 									debug: true,
-								});
+								}));
 
 								const data = await valorant.login();
 
