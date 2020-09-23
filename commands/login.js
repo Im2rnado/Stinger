@@ -87,7 +87,7 @@ module.exports = {
 								client.sessions.set(tagName, valorant = new Valorant.Client({
 									username: `${Username}`,
 									password: `${Password}`,
-									region: Valorant.region.eu,
+									region: Valorant.region.na,
 									debug: true,
 								}));
 
@@ -122,7 +122,7 @@ module.exports = {
 								client.sessions.set(tagName, valorant = new Valorant.Client({
 									username: `${Username}`,
 									password: `${Password}`,
-									region: Valorant.region.eu,
+									region: Valorant.region.ap,
 									debug: true,
 								}));
 
