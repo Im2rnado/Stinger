@@ -47,7 +47,7 @@ global.Premium = sequelize.define('premium', {
 
 client.once('ready', () => {
 	function randomStatus() {
-		const status = ['+help', 'v3.0.0', `${client.users.cache.size} users`];
+		const status = ['+help', 'v3.1.0', `${client.users.cache.size} users`, `${client.guilds.cache.size} servers`];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// client.user.setActivity(status[rstatus], {type: "WATCHING"});
@@ -70,29 +70,29 @@ client.once('ready', () => {
 });
 
 client.once('guildCreate', guild => {
-    console.log("Joined a new guild: " + guild.name);
-    //Your other stuff like adding to guildArray
+	console.log('Joined a new guild: ' + guild.name);
+	// Your other stuff like adding to guildArray
 
 	// Send Added in channel
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('**Someone added the bot :\)**')
-                .setDescription(`**Guild Name:** ${guild.name}`);
+		.setTitle('**Someone added the bot :)**')
+		.setDescription(`**Guild Name:** ${guild.name}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
 
 client.once('guildDelete', guild => {
-    console.log("Removed from a guild: " + guild.name);
-    //Your other stuff like adding to guildArray
+	console.log('Removed from a guild: ' + guild.name);
+	// Your other stuff like adding to guildArray
 
 	// Send Removed in channel
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
-		.setTitle('**Someone removed the bot :\(**')
-                .setDescription(`**Guild Name:** ${guild.name}`);
+		.setTitle('**Someone removed the bot :(**')
+		.setDescription(`**Guild Name:** ${guild.name}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
