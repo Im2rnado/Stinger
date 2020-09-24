@@ -27,7 +27,7 @@ module.exports = {
 				const y = await message.channel.send('<a:loading:749963556316905494>  Getting your shop...'); (async () => {
 					try {
 						const store1 = await valorant.getStorefront();
-						const shop = store1.Daily;
+						const shop = store1.Featured;
 
 						const NewMessage = new Discord.MessageEmbed()
 							.setTitle('**Today\'s Shop**')
