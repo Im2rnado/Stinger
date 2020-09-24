@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'rate',
-	description: 'Rates you',
+	description: 'Rates you!',
 	execute(message, args) {
 		const number = Math.floor(Math.random() * 101);
 		if (!args[0]) {

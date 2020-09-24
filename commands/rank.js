@@ -4,7 +4,7 @@ require('./login.js');
 
 module.exports = {
 	name: 'rank',
-	description: 'Returns your rank',
+	description: 'Returns your Valorant rank (Premium Only)',
 	async execute(message, args, client) {
 		const tagName = message.author.id;
 

@@ -1,6 +1,7 @@
 module.exports = {
 	name: 'ping',
-	description: 'Ping!',
+	description: 'Bot and API Latency!',
+	cooldown: 4,
 	async execute(message, args, client) {
 		// It sends the user "Pinging"
 		message.channel.send('<a:loading:749963556316905494> Pinging...').then(m =>{

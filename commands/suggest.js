@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
 	name: 'suggest',
-	description: 'Send your Suggestion',
+	description: 'Suggest things',
 	aliases: ['sg'],
 	usage: 'suggest <message>',
 	guildOnly: true,

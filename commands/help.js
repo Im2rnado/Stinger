@@ -13,9 +13,9 @@ module.exports = {
 
 		if (!args.length) {
 			const embed = new MessageEmbed()
-				.setTitle('Here are all of my commands:')
+				.setTitle('**Need Help?**')
 				.setColor('RANDOM')
-				.setDescription(commands.map(command => command.name).join('\n'))
+				.setDescription(commands.map(command => command.name).join(' - '))
 				.setFooter(`Send ${process.env.PREFIX}help [command name] to get info on a specific command.`);
 
 			return message.channel.send(embed);

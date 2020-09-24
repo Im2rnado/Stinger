@@ -13,7 +13,7 @@ const regionEmbed = new Discord.MessageEmbed()
 
 module.exports = {
 	name: 'login',
-	description: 'Logs in to your Valorant Account',
+	description: 'Logs in to your Valorant account (Premium Only)',
 	aliases: ['i', 'signin'],
 	usage: '[username] [password]',
 	async execute(message, args, client) {

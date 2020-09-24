@@ -5,7 +5,7 @@ const url = 'https://www.reddit.com/r/meme/hot/.json?limit=100';
 
 module.exports = {
 	name: 'meme',
-	description: 'sends meme',
+	description: 'Sends memes',
 	cooldown: '10',
 	execute(message) {
 

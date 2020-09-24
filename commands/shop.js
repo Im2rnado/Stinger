@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = {
 	name: 'shop',
-	description: 'Returns your store',
+	description: 'Returns your Valorant shop (Premium Only)',
 	aliases: ['store', 'st'],
 	async execute(message, args, client) {
 		const tagName = message.author.id;
@@ -27,7 +27,7 @@ module.exports = {
 				const y = await message.channel.send('<a:loading:749963556316905494>  Getting your shop...'); (async () => {
 					try {
 						const store1 = await valorant.getStorefront();
-						const shop = store1.Featured;
+						const shop = store1.Daily;
 
 						const NewMessage = new Discord.MessageEmbed()
 							.setTitle('**Today\'s Shop**')

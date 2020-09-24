@@ -8,47 +8,47 @@ module.exports = {
 	description: 'MOD ONLY!',
 	aliases: ['grant'],
 	async execute(message) {
-		if(message.author.id !== '510427790340915222') {
+		if (!(message.author.id == '510427790340915222')) {
 			message.react('🤡');
 		}
-                else {
-		const target = message.mentions.members.first();
-		const user = message.mentions.users.first();
+		else {
+			const target = message.mentions.members.first();
+			const user = message.mentions.users.first();
 
-		try {
+			try {
 			// equivalent to: INSERT INTO tags (name, descrption, username) values (?, ?, ?);
-			await Premium.create({
-				name: user.id,
-			});
-			if(target) {
-				const role = message.guild.roles.cache.find(role => role.name === 'Premium');
-				if(role) {
-					target.roles.add(role);
+				await Premium.create({
+					name: user.id,
+				});
+				if(target) {
+					const role = message.guild.roles.cache.find(role => role.name === 'Premium');
+					if(role) {
+						target.roles.add(role);
 
-					const otherIconEmbed = new Discord.MessageEmbed()
-						.setTitle(`Granted Premium to\n${user.tag}`)
-						.setColor('#32CD32')
-						.setThumbnail(user.displayAvatarURL())
-						.setTimestamp()
-						.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
+						const otherIconEmbed = new Discord.MessageEmbed()
+							.setTitle(`Granted Premium to\n${user.tag}`)
+							.setColor('#32CD32')
+							.setThumbnail(user.displayAvatarURL())
+							.setTimestamp()
+							.setFooter(`Requested by: ${message.author.tag}`, message.author.displayAvatarURL({ dynamic: true }));
 
-					return message.channel.send(otherIconEmbed);
+						return message.channel.send(otherIconEmbed);
+					}
+					else{
+						message.channel.send('An unexpected error has occured.');
+					}
 				}
-				else{
-					message.channel.send('An unexpected error has occured.');
+				else {
+					message.channel.send('Please specify who you want to add to premium.');
 				}
+				return message.channel.send(otherIconEmbed);
 			}
-			else {
-				message.channel.send('Please specify who you want to add to premium.');
+			catch (e) {
+				if (e.name === 'SequelizeUniqueConstraintError') {
+					return message.reply('That user already has premium.');
+				}
+				return message.reply('Something went wrong with adding a user.');
 			}
-			return message.channel.send(otherIconEmbed);
 		}
-		catch (e) {
-			if (e.name === 'SequelizeUniqueConstraintError') {
-				return message.reply('That user already has premium.');
-			}
-			return message.reply('Something went wrong with adding a user.');
-		}
-            }
 	},
 };

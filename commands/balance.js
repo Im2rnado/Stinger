@@ -4,7 +4,7 @@ require('./login.js');
 
 module.exports = {
 	name: 'balance',
-	description: 'Returns your points',
+	description: 'Returns your Valorant balance (Premium Only)',
 	aliases: ['bal', 'points'],
 	async execute(message, args, client) {
 		const tagName = message.author.id;
