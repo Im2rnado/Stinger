@@ -11,7 +11,7 @@ module.exports = {
 			.setTitle('**Stinger Discord Bot**')
 			.setThumbnail(client.user.displayAvatarURL())
 			.addFields(
-				{ name: 'Current Bot Version', value: '3.1.0' },
+				{ name: 'Current Bot Version', value: '3.1.2' },
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
 				{ name: 'Invite Me', value: '[Press Me!](https://discord.com/api/oauth2/authorize?client_id=743591965450305636&permissions=8&scope=bot)' },
 				{ name: 'Total Guilds', value: client.guilds.cache.size },

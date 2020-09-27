@@ -8,7 +8,7 @@ module.exports = {
 		if (!args[0]) {
 			const emved = new Discord.MessageEmbed()
 				.setTitle('Your Rating')
-				.setColor('PINK')
+				.setColor('FF69B4')
 				.addField('I would rate you a', `:pleading_face: ${number}%`);
 			return message.channel.send(emved);
 		}
@@ -16,7 +16,7 @@ module.exports = {
 			const user = message.mentions.users.first();
 			const emved = new Discord.MessageEmbed()
 				.setTitle('Your Friend\'s Rating')
-				.setColor('PINK')
+				.setColor('FF69B4')
 				.addField(`I would rate ${user.username} a`, `:pleading_face: ${number}%`);
 			return message.channel.send(emved);
 
