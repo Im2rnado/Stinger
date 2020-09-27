@@ -20,7 +20,8 @@ module.exports = {
 		}
 
 		const myIconEmbed = new Discord.MessageEmbed()
-			.setTitle(`${message.author.username}'s Avatar`)
+			.setTitle('Avatar')
+			.setDescription(`Do you think ${message.author.username} is cute? `)
 			.setImage(message.author.displayAvatarURL());
 
 		return message.channel.send(myIconEmbed).catch(err => console.log(err));
