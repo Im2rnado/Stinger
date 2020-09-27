@@ -15,7 +15,8 @@ module.exports = {
 			const embed = new MessageEmbed()
 				.setTitle('**Need Help?**')
 				.setColor('RANDOM')
-				.setDescription(commands.map(command => command.name).join(' - '))
+				.addField('Commands', (commands.map(command => command.name).join(' - ')))
+				.addField('Premium', '[Press Me](https://github.com/Im2rnado/Stinger-Help)')
 				.setFooter(`Send ${process.env.PREFIX}help [command name] to get info on a specific command.`);
 
 			return message.channel.send(embed);
