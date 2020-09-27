@@ -20,7 +20,7 @@ module.exports = {
 			if(target) {
 				const targetMember = message.guild.members.cache.get(target.id);
 				targetMember.kick();
-				message.channel.send(`**${target} was kicked!**\nhttps://media3.giphy.com/media/l3V0j3ytFyGHqiV7W/giphy.gif`);
+				message.channel.send(`**${target}, get kicked bish!**\nhttps://giphy.com/gifs/qiiimDJtLj4XK`);
 			}
 			else {
 				message.channel.send('And who should i kick?');

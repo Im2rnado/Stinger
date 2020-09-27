@@ -20,7 +20,7 @@ module.exports = {
 			if(target) {
 				const targetMember = message.guild.members.cache.get(target.id);
 				targetMember.ban();
-				message.channel.send(`**${target} was banned!**\nhttps://media1.giphy.com/media/H99r2HtnYs492/giphy.gif?cid=82a1493b44eliong6o0piwxrr7yojf600rjdv5xlso41su7n&rid=giphy.gif`);
+				message.channel.send(`**${target} was banned!**\nhttps://i.imgur.com/r42VJvZ.gif`);
 			}
 			else {
 				message.channel.send('**And who do you want me to ban?**\nhttps://i.imgur.com/RkIfjMP.gif');
