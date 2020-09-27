@@ -71,14 +71,13 @@ client.once('ready', () => {
 
 client.once('guildCreate', guild => {
 	console.log('Joined a new guild: ' + guild.name);
-	// Your other stuff like adding to guildArray
 
 	// Send Added in channel
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
 		.setTitle('**Someone added the bot :)**')
-		.addField('Guild Name' `${guild.name}`)
+		.addField('Guild Name', `${guild.name}`)
 		.addField('Total Guilds', `${client.guilds.cache.size}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
@@ -86,14 +85,13 @@ client.once('guildCreate', guild => {
 
 client.once('guildDelete', guild => {
 	console.log('Removed from a guild: ' + guild.name);
-	// Your other stuff like adding to guildArray
 
 	// Send Removed in channel
 
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
 		.setTitle('**Someone removed the bot :(**')
-		.addField('Guild Name' `${guild.name}`)
+		.addField('Guild Name', `${guild.name}`)
 		.addField('Total Guilds', `${client.guilds.cache.size}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
