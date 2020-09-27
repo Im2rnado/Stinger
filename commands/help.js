@@ -13,7 +13,7 @@ module.exports = {
 
 		if (!args.length) {
 			const embed = new MessageEmbed()
-				.setTitle('**Need Help?**')
+				.setTitle(':mailbox_with_mail: Hey! Want some help?')
 				.setColor('RANDOM')
 				.addField('Commands', (commands.map(command => command.name).join(' - ')))
 				.addField('Premium', '[Press Me](https://github.com/Im2rnado/Stinger-Help)')
