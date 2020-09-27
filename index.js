@@ -78,7 +78,7 @@ client.once('guildCreate', guild => {
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
 		.setTitle('**Someone added the bot :)**')
-		.setDescription(`**Guild Name:** ${guild.name}`);
+		.setDescription(`**Guild Name:** ${guild.name}\nThe bot is now in **${client.guilds.cache.size}** servers!`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
@@ -92,7 +92,7 @@ client.once('guildDelete', guild => {
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
 		.setTitle('**Someone removed the bot :(**')
-		.setDescription(`**Guild Name:** ${guild.name}`);
+		.setDescription(`**Guild Name:** ${guild.name}\nThe bot is now in **${client.guilds.cache.size}** servers!`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
