@@ -12,7 +12,9 @@ module.exports = {
 			if (!user) return message.reply('Please mention a user to access their profile picture.');
 
 			const otherIconEmbed = new Discord.MessageEmbed()
-				.setTitle(`${user.username}'s Avatar`)
+				.setTitle('Avatar')
+				.setDescription(`Do you think ${user.username} is cute? `)
+				.setColor('RANDOM')
 				.setImage(user.displayAvatarURL({ dynamic: true }));
 
 			return message.channel.send(otherIconEmbed).catch(err => console.log(err));
@@ -22,6 +24,7 @@ module.exports = {
 		const myIconEmbed = new Discord.MessageEmbed()
 			.setTitle('Avatar')
 			.setDescription(`Do you think ${message.author.username} is cute? `)
+			.setColor('RANDOM')
 			.setImage(message.author.displayAvatarURL({ dynamic: true }));
 
 		return message.channel.send(myIconEmbed).catch(err => console.log(err));
