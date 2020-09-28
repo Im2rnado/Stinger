@@ -29,12 +29,17 @@ module.exports = {
 			return message.reply('that\'s not a valid command!');
 		}
 
-		data.push(`**Name:** ${command.name}`);
+                const embed1 = new MessageEmbed()
+                                .setTitle(':mailbox_with_mail: Hey! Want some help?')
+				.setColor('RANDOM')
+                                .setFooter('Coded with ❤️ by im2rnado');
 
-		if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
-		if (command.description) data.push(`**Description:** ${command.description}`);
-		if (command.usage) data.push(`**Usage:** ${process.env.PREFIX}${command.name} ${command.usage}`);
+		embed1.addField('**Name**:', `${command.name}`);
 
-		message.channel.send(data, { split: true });
+		if (command.aliases) embed1.addField('**Aliases**:', `${command.aliases.join(', ')}`);
+		if (command.description) embed1.addField('**Description**:', `${command.description}`);
+		embed1.addField('**Usage**:', '[Press Me](https://github.com/Im2rnado/Stinger-Help)');
+
+		message.channel.send(embed1);
 	},
 };
