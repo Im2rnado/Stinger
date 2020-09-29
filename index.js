@@ -116,7 +116,7 @@ client.on('guildMemberRemove', member => {
 
     goodbyeEmbed.setColor('RANDOM');
     goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor! There are **' + member.guild.memberCount + '** left among us');
-    goodbyeEmbed.setDescription('Account Created on ' + member.user.createdAt);
+    goodbyeEmbed.setDescription(`**Account Created on**: ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`);
     goodbyeEmbed.setImage('https://gamewith-en.akamaized.net/article/thumbnail/rectangle/22183.png');
 
     member.guild.channels.cache.find(i => i.name === 'bot-logs').send(goodbyeEmbed);
