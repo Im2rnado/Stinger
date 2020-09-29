@@ -77,8 +77,8 @@ client.once('guildCreate', guild => {
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
 		.setTitle('**Someone added the bot :)**')
-		.addField('Guild Name', `${guild.name}`)
-		.addField('Total Guilds', `${client.guilds.cache.size}`);
+		.addField('**Guild Name**:', `${guild.name}`)
+		.addField('**Total Guilds**:', `${client.guilds.cache.size}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
@@ -91,8 +91,8 @@ client.once('guildDelete', guild => {
 	const embed12 = new Discord.MessageEmbed()
 		.setColor('RANDOM')
 		.setTitle('**Someone removed the bot :(**')
-		.addField('Guild Name', `${guild.name}`)
-		.addField('Total Guilds', `${client.guilds.cache.size}`);
+		.addField('**Guild Name**:', `${guild.name}`)
+		.addField('**Total Guilds**:', `${client.guilds.cache.size}`);
 
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
@@ -104,8 +104,8 @@ client.on('guildMemberAdd', member => {
     const welcomeEmbed = new Discord.MessageEmbed();
 
     welcomeEmbed.setColor('RANDOM');
-    welcomeEmbed.setTitle('**' + member.user.username + '** is now Among Us other **' + member.guild.memberCount + '** people');
-    welcomeEmbed.setDescription('Account Created on' + member.user.createdAt);
+    welcomeEmbed.setTitle('**' + member.user.username + '** is now among us other **' + member.guild.memberCount + '** people');
+    welcomeEmbed.setDescription('Account Created on ' + member.user.createdAt);
     welcomeEmbed.setImage('https://cdn.mos.cms.futurecdn.net/93GAa4wm3z4HbenzLbxWeQ-650-80.jpg.webp');
 
     member.guild.channels.cache.find(i => i.name === 'bot-logs').send(welcomeEmbed);
@@ -115,8 +115,8 @@ client.on('guildMemberRemove', member => {
     const goodbyeEmbed = new Discord.MessageEmbed();
 
     goodbyeEmbed.setColor('RANDOM');
-    goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor there are **' + member.guild.memberCount + '** left Among Us');
-    goodbyeEmbed.setDescription('Account Created on' + member.user.createdAt);
+    goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor there are **' + member.guild.memberCount + '** left among us');
+    goodbyeEmbed.setDescription('Account Created on ' + member.user.createdAt);
     goodbyeEmbed.setImage('https://gamewith-en.akamaized.net/article/thumbnail/rectangle/22183.png');
 
     member.guild.channels.cache.find(i => i.name === 'bot-logs').send(goodbyeEmbed);
