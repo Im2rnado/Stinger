@@ -4,6 +4,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
+const moment = require('moment');
 const Sequelize = require('sequelize');
 const invite = ('https://discord.gg/CsHFZxh');
 
@@ -99,13 +100,12 @@ client.once('guildDelete', guild => {
 
 // Welcome & goodbye messages
 client.on('guildMemberAdd', member => {
-    member.roles.add(member.guild.roles.cache.find(i => i.name === 'Member'));
 
     const welcomeEmbed = new Discord.MessageEmbed();
 
     welcomeEmbed.setColor('RANDOM');
     welcomeEmbed.setTitle('**' + member.user.username + '** is now among us other **' + member.guild.memberCount + '** people');
-    welcomeEmbed.setDescription('Account Created on ' + member.user.createdAt);
+    welcomeEmbed.setDescription(`**Account Created on**: ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`);
     welcomeEmbed.setImage('https://cdn.mos.cms.futurecdn.net/93GAa4wm3z4HbenzLbxWeQ-650-80.jpg.webp');
 
     member.guild.channels.cache.find(i => i.name === 'bot-logs').send(welcomeEmbed);
