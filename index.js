@@ -115,7 +115,7 @@ client.on('guildMemberRemove', member => {
     const goodbyeEmbed = new Discord.MessageEmbed();
 
     goodbyeEmbed.setColor('RANDOM');
-    goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor there are **' + member.guild.memberCount + '** left among us');
+    goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor! There are **' + member.guild.memberCount + '** left among us');
     goodbyeEmbed.setDescription('Account Created on ' + member.user.createdAt);
     goodbyeEmbed.setImage('https://gamewith-en.akamaized.net/article/thumbnail/rectangle/22183.png');
 
