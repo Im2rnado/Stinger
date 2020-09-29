@@ -97,9 +97,6 @@ client.once('guildDelete', guild => {
 	client.channels.cache.get('743595649508835335').send(embed12);
 });
 
-
-I'm also making a welcome function for my bot here's the code, it seems to work great
-
 // Welcome & goodbye messages
 client.on('guildMemberAdd', member => {
     member.roles.add(member.guild.roles.cache.find(i => i.name === 'Member'));
