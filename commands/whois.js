@@ -14,7 +14,7 @@ module.exports = {
 		if (member.presence.status === 'dnd') member.presence.status = 'Do Not Disturb';
 		if (member.presence.status === 'online') member.presence.status = 'Online';
 		if (member.presence.status === 'idle') member.presence.status = 'Idle';
-		if (member.presence.status === 'offline') member.presence.status = 'offline';
+		if (member.presence.status === 'offline') member.presence.status = 'Offline';
 
 		const y = Date.now() - message.guild.members.cache.get(member.id).joinedAt;
 		const joined = Math.floor(y / 86400000);
