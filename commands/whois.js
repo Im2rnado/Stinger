@@ -26,12 +26,12 @@ module.exports = {
 			.setTimestamp()
 			.setColor('RANDOM')
 			.setThumbnail(member.user.displayAvatarURL())
-			.addField('Display Name', member.user.username, true)
-			.addField('ID', member.id, true)
-			.addField('Status', status, true)
-			.addField('Roles', `<@&${member._roles.join('> <@&')}>`, true)
-			.addField('Joined the server At', `${joineddate} (${joined} days ago)`)
-			.addField('Account Created On:', ` ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`)
+			.addField('**Display Name**:', member.user.username, true)
+			.addField('**ID**:', member.id, true)
+			.addField('**Status**:', status, true)
+			.addField('**Roles**:', `<@&${member._roles.join('> <@&')}>`, true)
+			.addField('**Joined the server on**:', `${joineddate} (${joined} days ago)`)
+			.addField('**Account created on**:', ` ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`)
 			.setFooter(`${member.user.tag}`);
 
 		message.channel.send(userEmbed);
