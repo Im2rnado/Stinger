@@ -14,7 +14,7 @@ module.exports = {
 				{ name: 'Current Bot Version', value: '3.1.2' },
 				{ name: 'Command Prefix', value: `${process.env.PREFIX}` },
 				{ name: 'Invite Me', value: '[Press Me!](https://discord.com/api/oauth2/authorize?client_id=743591965450305636&permissions=8&scope=bot)' },
-				{ name: 'Total Guilds', value: client.guilds.cache.size },
+				{ name: 'Total Servers', value: client.guilds.cache.size },
 				{ name: 'Owner/Developer', value: '[Tornado](https://twitter.com/im2rnadoo)' },
 				{ name: 'Hosted by', value: 'heroku.com' },
 				{ name: 'Support Server', value: '[Press Me!](https://discord.gg/CsHFZxh)' })
