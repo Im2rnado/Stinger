@@ -2,12 +2,12 @@ module.exports = {
 	name: '8ball',
 	description: 'Simple 8ball',
 	execute(message, args) {
-		if (!args[2]) {
+		if (!args[1]) {
 			return message.channel.send('Please ask a full questions.');
 		}
 		const number = Math.floor(Math.random() * 6);
 		if (number == 0) {
-			return message.channel.send('Yes, definitely so.');
+			return message.channel.send('Yes, of course.');
 		}
 		if (number == 1) {
 			return message.channel.send('No, definitely not.');
@@ -16,13 +16,13 @@ module.exports = {
 			return message.channel.send('Ask again later.');
 		}
 		if (number == 3) {
-			return message.channel.send('It is uncertain.');
+			return message.channel.send('Not sure.');
 		}
 		if (number == 4) {
-			return message.channel.send('Odds are not in your favor.');
+			return message.channel.send('No no.');
 		}
 		if (number == 5) {
-			return message.channel.send('Odds are in your favor.');
+			return message.channel.send('Yessir.');
 		}
 	},
 };
