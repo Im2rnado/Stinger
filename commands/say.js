@@ -8,7 +8,7 @@ module.exports = {
 			member,
 		} = message;
 
-		if(member.hasPermission('ADMINISTRATOR')) {
+		if(member.hasPermission('MANAGE_MESSAGES')) {
 			const sayMessage = args.join (' ');
 			message.delete().catch(err => console.log(err));
 			message.channel.send(sayMessage);
