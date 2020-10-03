@@ -203,7 +203,7 @@ client.on('message', message => {
 
                 const errormessage2 = new Discord.MessageEmbed()
 			.setColor('#ffff00')
-			.setTitle(`${message.author.username} encountered an error`)
+			.setTitle(`**${message.author.tag}** \`(${message.author.id})\` encountered an error!`)
 			.setDescription(`Command Used: **${message.content}**`)
 			.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
 
