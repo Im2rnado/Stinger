@@ -198,7 +198,16 @@ client.on('message', message => {
 			.setTitle('⚠️ **Uh Oh! That was unexpected!**')
 			.setDescription(`There seems to be an error and we're working on a fix! You can [Join our Support Server](${invite}) and report it there.`)
 			.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
-		return message.channel.send(errormessage1);
+
+		message.channel.send(errormessage1);
+
+                const errormessage2 = new Discord.MessageEmbed()
+			.setColor('#ffff00')
+			.setTitle(`${message.author.username} encountered an error`)
+			.setDescription(`Command Used: **${message.content}**`)
+			.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
+
+                client.channels.cache.get('743595649508835335').send(errormessage2);
 	}
 
 });
