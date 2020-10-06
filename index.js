@@ -48,7 +48,7 @@ global.Premium = sequelize.define('premium', {
 
 client.once('ready', () => {
 	function randomStatus() {
-		const status = ['+help', 'v3.1.2', `${client.users.cache.size} users`, `${client.guilds.cache.size} servers`];
+		const status = ['+help', 'v3.2.0', `${client.users.cache.size} users`, `${client.guilds.cache.size} servers`];
 		const rstatus = Math.floor(Math.random() * status.length);
 
 		// client.user.setActivity(status[rstatus], {type: "WATCHING"});
