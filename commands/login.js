@@ -35,14 +35,14 @@ module.exports = {
 			h.react('762949162194829313').then(() => h.react('762949184839745557')).then(() => h.react('762949197833044020'));
 
 			const filter = (reaction, user) => {
-				return ['762949162194829313', '762949184839745557', '762949197833044020'].includes(reaction.emoji.name) && user.id === message.author.id;
+				return ['762949162194829313', '762949184839745557', '762949197833044020'].includes(reaction.emoji.id) && user.id === message.author.id;
 			};
 
 			h.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 				.then(async collected => {
 					const reaction = collected.first();
 
-					if (reaction.emoji.name === '76294916219482931') {
+					if (reaction.emoji.id === '762949162194829313') {
 						await h.delete();
 						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 							try {
@@ -76,7 +76,7 @@ module.exports = {
 							}
 						})();
 					}
-					if (reaction.emoji.name === '762949184839745557') {
+					if (reaction.emoji.id === '762949184839745557') {
 						await h.delete();
 						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 							try {
@@ -111,7 +111,7 @@ module.exports = {
 							}
 						})();
 					}
-					if (reaction.emoji.name === '762949197833044020') {
+					if (reaction.emoji.id === '762949197833044020') {
 						await h.delete();
 						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 							try {
