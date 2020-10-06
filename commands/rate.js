@@ -14,6 +14,8 @@ module.exports = {
 		}
 		else {
 			const user = message.mentions.users.first();
+			if (!user) return message.channel.send('And who am I supposed to rate, dummy');
+
 			const emved = new Discord.MessageEmbed()
 				.setTitle('Your Friend\'s Rating')
 				.setColor('FF69B4')

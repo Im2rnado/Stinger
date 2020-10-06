@@ -101,26 +101,26 @@ client.once('guildDelete', guild => {
 // Welcome & goodbye messages
 client.on('guildMemberAdd', member => {
 
-    const welcomeEmbed = new Discord.MessageEmbed();
+	const welcomeEmbed = new Discord.MessageEmbed();
 
-    welcomeEmbed.setColor('RANDOM');
-    welcomeEmbed.setTitle('**' + member.user.username + '** is now among us other **' + member.guild.memberCount + '** people');
-    welcomeEmbed.setDescription(`**Account Created on**: ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`);
-    welcomeEmbed.setImage('https://cdn.mos.cms.futurecdn.net/93GAa4wm3z4HbenzLbxWeQ-650-80.jpg.webp');
+	welcomeEmbed.setColor('RANDOM');
+	welcomeEmbed.setTitle('**' + member.user.username + '** is now among us other **' + member.guild.memberCount + '** people');
+	welcomeEmbed.setDescription(`**Account Created on**: ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`);
+	welcomeEmbed.setImage('https://cdn.mos.cms.futurecdn.net/93GAa4wm3z4HbenzLbxWeQ-650-80.jpg.webp');
 
-    member.guild.channels.cache.find(i => i.name === 'bot-logs').send(welcomeEmbed);
-})
+	member.guild.channels.cache.find(i => i.name === 'bot-logs').send(welcomeEmbed);
+});
 
 client.on('guildMemberRemove', member => {
-    const goodbyeEmbed = new Discord.MessageEmbed();
+	const goodbyeEmbed = new Discord.MessageEmbed();
 
-    goodbyeEmbed.setColor('RANDOM');
-    goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor! There are **' + member.guild.memberCount + '** left among us');
-    goodbyeEmbed.setDescription(`**Account Created on**: ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`);
-    goodbyeEmbed.setImage('https://gamewith-en.akamaized.net/article/thumbnail/rectangle/22183.png');
+	goodbyeEmbed.setColor('RANDOM');
+	goodbyeEmbed.setTitle('**' + member.user.username + '** was not the impostor! There are **' + member.guild.memberCount + '** left among us');
+	goodbyeEmbed.setDescription(`**Account Created on**: ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`);
+	goodbyeEmbed.setImage('https://gamewith-en.akamaized.net/article/thumbnail/rectangle/22183.png');
 
-    member.guild.channels.cache.find(i => i.name === 'bot-logs').send(goodbyeEmbed);
-})
+	member.guild.channels.cache.find(i => i.name === 'bot-logs').send(goodbyeEmbed);
+});
 // Welcome & goodbye messages end
 
 
@@ -201,13 +201,13 @@ client.on('message', message => {
 
 		message.channel.send(errormessage1);
 
-                const errormessage2 = new Discord.MessageEmbed()
+		const errormessage2 = new Discord.MessageEmbed()
 			.setColor('#ffff00')
 			.setTitle(`**${message.author.tag}** \`(${message.author.id})\` encountered an error!`)
 			.setDescription(`Command Used: **${message.content}**`)
 			.addField('Error Message: ', `\`\`\`js\n${error}\`\`\``);
 
-                client.channels.cache.get('743595649508835335').send(errormessage2);
+		client.channels.cache.get('743595649508835335').send(errormessage2);
 	}
 
 });

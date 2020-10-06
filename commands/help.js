@@ -8,7 +8,6 @@ module.exports = {
 	cooldown: 5,
 	usage: '[command name]',
 	execute(message, args) {
-		const data = [];
 		const { commands } = message.client;
 
 		if (!args.length) {
@@ -29,10 +28,10 @@ module.exports = {
 			return message.reply('that\'s not a valid command!');
 		}
 
-                const embed1 = new MessageEmbed()
-                                .setTitle(':mailbox_with_mail: Hey! Want some help?')
-				.setColor('RANDOM')
-                                .setFooter('Coded with ❤️ by im2rnado');
+		const embed1 = new MessageEmbed()
+			.setTitle(':mailbox_with_mail: Hey! Want some help?')
+			.setColor('RANDOM')
+			.setFooter('Coded with ❤️ by im2rnado');
 
 		embed1.addField('**Name**:', `${command.name}`);
 

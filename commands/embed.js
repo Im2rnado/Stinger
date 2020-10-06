@@ -6,20 +6,20 @@ module.exports = {
 	guildOnly: true,
 	execute(message, args) {
 
-                const {
+		const {
 			member,
 		} = message;
 
 		if(member.hasPermission('MANAGE_MESSAGES')) {
-		const embedContent = args.join (' ');
-		message.delete().catch(err => console.log(err));
+			const embedContent = args.join (' ');
+			message.delete().catch(err => console.log(err));
 
-		const yourEmbed = new Discord.MessageEmbed()
-			.setColor('#FA4454')
-			.setDescription(`${embedContent}`);
+			const yourEmbed = new Discord.MessageEmbed()
+				.setColor('#FA4454')
+				.setDescription(`${embedContent}`);
 
-		return message.channel.send(yourEmbed);
-                }
+			return message.channel.send(yourEmbed);
+		}
 		else {
 			message.react('🤡');
 		}

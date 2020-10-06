@@ -9,7 +9,7 @@ module.exports = {
 	execute(message, args) {
 		if (args[0]) {
 			const user = message.mentions.users.first();
-			if (!user) return message.reply('Please mention a user to access their profile picture.');
+			if (!user) return message.reply('And who\'s avatar am I supposed to get, dummy');
 
 			const otherIconEmbed = new Discord.MessageEmbed()
 				.setTitle('Avatar')
@@ -23,7 +23,7 @@ module.exports = {
 
 		const myIconEmbed = new Discord.MessageEmbed()
 			.setTitle('Avatar')
-			.setDescription(`Do you think ${message.author.username} is cute? `)
+			.setDescription(`I think ${message.author.username} is cute`)
 			.setColor('RANDOM')
 			.setImage(message.author.displayAvatarURL({ dynamic: true }));
 
