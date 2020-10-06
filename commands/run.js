@@ -10,14 +10,13 @@ module.exports = {
     if (!(message.author.id == '510427790340915222')) return message.react('🤡');
     
     const commandName = args[0].toLowerCase();
-    const response = `client.${commandName}`
     
 		const yourEmbed = new Discord.MessageEmbed()
 			.setColor('#FA4454')
 			.setThumbnail(client.user.displayAvatarURL())
 			.addFields(
 				{ name: 'Runned Code', value: `${args[0]}` },
-				{ name: 'Result', value: `${response}` })
+				{ name: 'Result', value: `client.${commandName}` })
 			.setTimestamp();
 
 		return message.channel.send(yourEmbed);
