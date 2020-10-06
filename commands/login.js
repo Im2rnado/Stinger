@@ -9,7 +9,7 @@ const yourEmbed = new Discord.MessageEmbed()
 const regionEmbed = new Discord.MessageEmbed()
 	.setColor('#FA4454')
 	.setTitle('**Please react with your region number.**')
-	.setDescription('1️⃣ Europe\n2️⃣ North America\n3️⃣ Asia Pacific');
+	.setDescription('<:eu:762949162194829313> Europe\n<:na:762949184839745557> North America\n3<:global:762949197833044020> Others');
 
 module.exports = {
 	name: 'login',
@@ -32,17 +32,17 @@ module.exports = {
 			}
 
 			const h = await message.channel.send(regionEmbed);
-			h.react('1️⃣').then(() => h.react('2️⃣')).then(() => h.react('3️⃣'));
+			h.react('<:eu:762949162194829313>').then(() => h.react('<:na:762949184839745557>')).then(() => h.react('<:global:762949197833044020>'));
 
 			const filter = (reaction, user) => {
-				return ['1️⃣', '2️⃣', '3️⃣'].includes(reaction.emoji.name) && user.id === message.author.id;
+				return ['<:eu:762949162194829313>', '<:na:762949184839745557>', '<:global:762949197833044020>'].includes(reaction.emoji.name) && user.id === message.author.id;
 			};
 
 			h.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
 				.then(async collected => {
 					const reaction = collected.first();
 
-					if (reaction.emoji.name === '1️⃣') {
+					if (reaction.emoji.name === '<:eu:762949162194829313>') {
 						await h.delete();
 						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 							try {
@@ -76,7 +76,7 @@ module.exports = {
 							}
 						})();
 					}
-					if (reaction.emoji.name === '2️⃣') {
+					if (reaction.emoji.name === '<:na:762949184839745557>') {
 						await h.delete();
 						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 							try {
@@ -111,7 +111,7 @@ module.exports = {
 							}
 						})();
 					}
-					if (reaction.emoji.name === '3️⃣') {
+					if (reaction.emoji.name === '<:global:762949197833044020>') {
 						await h.delete();
 						const y = await message.channel.send('<a:loading:749963556316905494>  Signing in to Riot Services...'); (async () => {
 							try {
@@ -151,7 +151,7 @@ module.exports = {
 				});
 		}
 		else {
-			message.channel.send('**You don\'t have premium! DM @tornado#9999 to buy Premium**');
+			message.channel.send('**You don\'t have access to use this bot! DM @tornado#9999 to buy Premium**');
 		}
 	},
 };
