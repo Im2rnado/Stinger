@@ -14,7 +14,7 @@ module.exports = {
 		if (member.presence.status === 'dnd') member.presence.status = 'Do Not Disturb';
 		if (member.presence.status === 'online') member.presence.status = 'Online';
 		if (member.presence.status === 'idle') member.presence.status = 'Idle';
-		if (member.presence.status === 'offline') member.presence.status = 'offline';
+		if (member.presence.status === 'offline') member.presence.status = 'Offline';
 
 		const y = Date.now() - message.guild.members.cache.get(member.id).joinedAt;
 		const joined = Math.floor(y / 86400000);
@@ -26,12 +26,12 @@ module.exports = {
 			.setTimestamp()
 			.setColor('RANDOM')
 			.setThumbnail(member.user.displayAvatarURL())
-			.addField('Display Name', member.user.username, true)
-			.addField('ID', member.id, true)
-			.addField('Status', status, true)
-			.addField('Roles', `<@&${member._roles.join('> <@&')}>`, true)
-			.addField('Joined the server At', `${joineddate} (${joined} days ago)`)
-			.addField('Account Created On:', ` ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`)
+			.addField('**Display Name**:', member.user.username, true)
+			.addField('**ID**:', member.id, true)
+			.addField('**Status**:', status, true)
+			.addField('**Roles**:', `<@&${member._roles.join('> <@&')}>`, true)
+			.addField('**Joined the server on**:', `${joineddate} (${joined} days ago)`)
+			.addField('**Account created on**:', ` ${moment.utc(member.user.createdAt).format('dddd, MMMM Do YYYY')}`)
 			.setFooter(`${member.user.tag}`);
 
 		message.channel.send(userEmbed);
