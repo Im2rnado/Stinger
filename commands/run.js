@@ -15,7 +15,7 @@ module.exports = {
 			.setColor('#FA4454')
 			.setThumbnail(client.user.displayAvatarURL())
 			.addFields(
-				{ name: 'Runned Code', value: `${args[0]` },
+				{ name: 'Runned Code', value: `${args[0]}` },
 				{ name: 'Resuly', value: `${response}` })
 			.setTimestamp();
 
