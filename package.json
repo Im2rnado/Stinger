@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "beautify": "0.0.8",
     "colors": "^1.4.0",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
