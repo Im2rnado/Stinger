@@ -1,10 +1,10 @@
 module.exports = {
-	name: 'reload',
-	description: 'MOD ONLY!',
+	name: "reload",
+	description: "MOD ONLY!",
 	args: true,
 	execute(message, args, client) {
-		if (!(message.author.id == '510427790340915222')) {
-			message.react('🤡');
+		if (!(message.author.id == "510427790340915222")) {
+			message.react("🤡");
 		}
 		else {
 			const commandName = args[0].toLowerCase();
