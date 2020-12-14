@@ -6,8 +6,8 @@ const Discord = require("discord.js"),
 const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "USER", "REACTION"] });
 
 /**
-	 * - Declares commands, sessions, version and owner
-	 */
+ * - Declares commands, sessions, version and owner
+*/
 client.commands = new Discord.Collection();
 client.sessions = new Discord.Collection();
 client.owner = "510427790340915222";
