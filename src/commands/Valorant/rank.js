@@ -4,6 +4,7 @@ const premUsers = require("../../models/premium.js");
 module.exports = {
 	name: "rank",
 	description: "Returns your Valorant rank (Premium Only)",
+	category: "Valorant",
 	async execute(message, args, client) {
 		const tagName = message.author.id;
 

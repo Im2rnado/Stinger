@@ -6,7 +6,7 @@ module.exports = {
 	name: "login",
 	description: "Logs in to your Valorant account (Premium Only)",
 	aliases: ["i", "signin"],
-	usage: "[username] [password]",
+	category: "Valorant",
 	async execute(message, args, client) {
 		const tagName = message.author.id;
 

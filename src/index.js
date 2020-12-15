@@ -10,6 +10,7 @@ const client = new Discord.Client({ partials: ["MESSAGE", "CHANNEL", "USER", "RE
 */
 client.commands = new Discord.Collection();
 client.sessions = new Discord.Collection();
+client.version = "v1.0.0";
 client.owner = "510427790340915222";
 client.logs = "787995461926518784";
 client.invite = "https://discord.gg/5pKvUpA";
