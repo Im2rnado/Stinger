@@ -13,7 +13,7 @@
   "author": "im2rnado",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "beautify": "0.0.8",
     "colors": "^1.4.0",
     "discord.js": "^12.3.1",
